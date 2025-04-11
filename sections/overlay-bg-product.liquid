@@ -1,0 +1,89 @@
+{{ 'overlay-bd-product.css' | asset_url | stylesheet_tag }}
+
+<div class= " overlaybg-main-container ">
+  
+
+{% assign collections = section.blocks | map: 'settings' | map: 'collection' %}
+{% assign first_collection = section.blocks[0].settings.collection %}
+
+{% if section.blocks.size > 0 and first_collection %}
+  <div
+    class="hover-collections-wrapper"
+    id="hover-collections-wrapper"
+    style="background-image: url('{{ first_collection.featured_image | image_url: width: 1200 }}');
+    overflow: hidden;
+    widht: 100%;
+    height: 100;
+    box-sizing: border-box;"
+    
+  >
+    <div class="hover-overlay"></div>
+    <div class="hover-collection-titles">
+      {% for block in section.blocks %}
+        {% assign collection = block.settings.collection %}
+        {% if collection %}
+         <h3 data-image="{{ collection.featured_image | image_url: width: 1200 }}" class="{% if forloop.first %}active{% endif %}">
+
+            {{ collection.title }}
+            <sup>{{ collection.products_count }}</sup>
+          </h3>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% style %}
+
+{% endstyle %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const wrapper = document.getElementById('hover-collections-wrapper');
+    const titles = wrapper.querySelectorAll('.hover-collection-titles h3');
+
+    titles.forEach(title => {
+      title.addEventListener('mouseenter', function () {
+        const imageUrl = this.getAttribute('data-image');
+        wrapper.style.backgroundImage = `url(${imageUrl})`;
+
+        // Remove 'active' class from all titles
+        titles.forEach(t => t.classList.remove('active'));
+
+        // Add 'active' class to current hovered title
+        this.classList.add('active');
+      });
+    });
+  });
+</script>
+
+{% else %}
+  <p>Please add at least one collection block.</p>
+{% endif %}
+
+
+{% schema %}
+{
+  "name": "overlay-title-bg",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Select Collection"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 10,
+  "presets": [
+    {
+      "name": "overlay-title-bg",
+      "blocks": []
+    }
+  ]
+}
+{% endschema %}

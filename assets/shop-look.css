@@ -1,0 +1,119 @@
+  .quick-add-btn {
+    color: black !important;
+    background-color: lightgray;
+    padding: 15px;
+    width: 100% !important;
+    border: none !important;
+  }
+  
+.quick-add-btn:hover {
+  background-color: transparent !important;
+}
+
+  form.quick-add-form {
+    margin-top: -10px;
+}
+.shop-main-container {
+    display: flex;
+    gap: 20px;
+  }
+  .shop-main-container {
+    flex: 1;
+  }
+  .img-container {
+    flex: 1; /* 50% of the width */
+  }
+  
+  .img-container img {
+    width: 100%; /* Make the image take full width of the container */
+    height: auto;
+  }
+  
+  .collection-container {
+    flex: 1; /* 50% of the width */
+  }
+  .collection-container p {
+    padding-bottom: 30px;
+  }
+
+  .products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Space between product items */
+  }
+  
+  .shop-product-item {
+    width: 100%; /* Full width inside the flex container */
+    text-align: center;
+    border-top: 2px solid black;
+  }
+  
+  .shop-product-item img {
+    width: 100%;
+    height: auto;
+  }
+  .shop-featured-products {
+  
+    display: flex;
+    gap: 20px;
+  /*  flex-wrap: wrap; */
+    justify-content: center;
+    margin: 0px 20px 0px 20px;
+  }
+  .card-label {
+    background-color: #f8f7f7;
+    margin-top: -10px;
+    padding: 10px 10px 10px 10px;
+
+  }
+  .card-label span {
+    color: black;
+  }
+  .shop-main-container {
+    width: 100%;
+
+  }
+  .img-container {
+    width: 50%;
+  }
+.collection-container {
+  width: 50%;
+}
+@media (min-width: 1500px) {
+  .collection-container {
+    padding: 130px 30px 53px 30px;
+}
+}
+@media (max-width: 1500px) and (min-width:1200px) {
+  .collection-container {
+    padding: 80px 30px 53px 30px;
+}
+}
+  @media only screen and (min-width: 990px) and (max-width: 1399px) {
+  .shop-featured-products {
+    width: 90%;
+      height: auto;
+      margin-left: 24px;
+  }
+}
+@media (min-width: 750px) and (max-width: 989px) {
+  .shop-featured-products {
+    width: 90%;
+      height: auto;
+      margin-left: 24px;
+  }
+}  
+@media only screen and (max-width: 749px) {
+
+  .shop-main-container {
+    flex-direction: column;
+    text-align: center;
+    margin: 10px;
+  }
+  .img-container {
+    width: 100%;
+  }
+  .collection-container {
+    width: 100%;
+  }
+}

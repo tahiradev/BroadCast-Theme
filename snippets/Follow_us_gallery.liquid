@@ -1,0 +1,17 @@
+<div class="Follow-us-container">
+  <div class="follow-us-inner-container">
+    <div class="follow-us-content">
+      <p>{{ section.settings.captionid }}</p>
+      <h2>{{ section.settings.heading }}</h2>
+    </div>
+    <div class="follow-us-img-gallery ">
+      {% for block in section.blocks %}
+        {% if block.settings.follow_img %}
+            <div class="image-container image-ratio-{{ section.settings.image_ratio }}">
+          <img src="{{ block.settings.follow_img| img_url: 'original' }}" alt="TImeless" />
+            </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

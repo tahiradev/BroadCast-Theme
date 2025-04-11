@@ -1,0 +1,41 @@
+<div class="parent-container">
+<div class="favourit-product-main-container" style="background-image: url('{{ section.settings.fp_bg_img | img_url: 'master' }}'); height: 70vh;">
+  <div class="inner-fp-container">
+    <div class="fb-content">
+      <h2 class="fp-head">{{ section.settings.fp_heading }}</h2>
+      <p class="fp-para">{{ section.settings.fp_Discription }}</p>
+      <div class="hero-fp-button-container">
+      <a href="{{ section.settings.fp_button_link }}" class="fp-button">
+        {{ section.settings.fp_button_text }}
+      </a>
+      </div>
+    </div>
+    <div class="fp-product-container">
+      {% if section.settings.fp_selected_product %}
+        {% assign product = all_products[section.settings.fp_selected_product] %}
+        {% if product %}
+          <div class="fp-product-card">
+            <div class="product-fp-image">
+              <a href="{{ product.url }}">
+                <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
+              </a>
+            </div>
+            <div class="fp-product-info">
+              <a class="product-title" href="{{ product.url }}">{{ product.title }}</a>
+              <div class="f-product-pricing">
+                <span class="current-price">{{ product.price | money }}</span>
+                {% if product.compare_at_price > product.price %}
+                  <span class="original-price">{{ product.compare_at_price | money }}</span>
+                {% endif %}
+              </div>
+              <p class="product-description" style="margin: 0px;">{{ product.description | truncate: 100 }}</p>
+            </div>
+          </div>
+        {% else %}
+          <p>Product not found.</p>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+</div>

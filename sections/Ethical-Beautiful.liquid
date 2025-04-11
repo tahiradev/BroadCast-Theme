@@ -1,0 +1,173 @@
+{{ 'Ethical-Beautiful.css' | asset_url | stylesheet_tag }}
+
+<div class="content-contain">
+    <h2 class="cont-head">{{section.settings.heading}}</h2>
+    <p class="cont-discript">{{section.settings.description}}</p>
+</div>
+<div class="Ethical-cards-cont">
+   
+    <div class="eth-Timeless brick-block">
+        <div class="bg-image-contain" >
+        <img src="{{ section.settings.timeless_img| img_url: 'master' }}" alt="TImeless" style="height: {{ section.settings.image_height }}px;" />
+        </div>
+        <div class="eth-overlay backgrop-radial">
+            <h1 class="overlay-heading" >{{section.settings.eth_ring_heading}}</h1>
+            <p class="overlay-para">{{section.settings.ring_description}}</p>
+          <div class="beaut-buttons">
+            {% if section.settings.button_Text %}
+                <a href="#" class="eth-button">
+                  {{ section.settings.button_Text }}
+                </a>
+            {% endif %}
+            <a href="/about" class="btn-underline">{{ section.settings.btn_underline1 }}</a>
+          </div>
+        </div>
+    </div>
+    <div class="eth-Ring brick-block">
+        <div class="bg-image-contain">
+        <img src="{{ section.settings.ring_img| img_url: 'master' }}" alt="Ring" style="height: {{ section.settings.image_height }}px;"  />
+        </div>
+        <div class="eth-overlay backgrop-radial"    style="
+   
+     ">
+            <h1 class="overlay-heading">{{ section.settings.eth_timeless_heading }}</h1>
+            <p class="overlay-para">{{ section.settings.Timeless_description }}</p>
+          <div class="beaut-buttons">
+            {% if section.settings.button_timeless %}
+                <a href="#" class="eth-button">
+                    {{ section.settings.button_timeless }}
+                </a>
+            
+            {% endif %}
+             <a href="/about" class="btn-underline">{{ section.settings.btn_underline2 }}</a>
+          </div>
+        </div>
+        
+    </div>
+</div>
+
+<style>
+  .eth-overlay {
+            position: absolute;
+       {% if section.settings.position == 'top-left' %}
+         top: 0px; left: 0px;
+       {% elsif section.settings.position == 'top-center' %}
+         top: 0px; left: 50%; transform: translateX(-50%);
+       {% elsif section.settings.position == 'top-right' %}
+         top: 0px; right: 0px;
+       {% elsif section.settings.position == 'middle-left' %}
+         top: 50%; left: 10px; transform: translateY(-50%);
+       {% elsif section.settings.position == 'middle-center' %}
+         top: 50%; left: 50%; transform: translate(-50%, -50%);
+       {% elsif section.settings.position == 'middle-right' %}
+         top: 50%; right: 10px; transform: translateY(-50%);
+       {% elsif section.settings.position == 'bottom-left' %}
+         bottom: 10px; left: 10px;
+       {% elsif section.settings.position == 'bottom-center' %}
+         bottom: 10px; left: 50%; transform: translateX(-50%);
+       {% elsif section.settings.position == 'bottom-right' %}
+         bottom: 10px; right: 10px;
+       {% endif %}
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Ethical Beautiful",
+    "settings": [
+
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Ethical-heading"
+        },
+        {
+            "type": "text",
+            "id": "description",
+            "label": "Description"
+        },
+        {
+            "type": "image_picker",
+            "id": "ring_img",
+            "label": "select ring image"
+        },
+        {
+            "type": "text",
+            "id": "eth_ring_heading",
+            "label": "Ring-Heading"
+        },
+        {
+            "type": "text",
+            "id": "ring_description",
+            "label": "Description"
+        },
+        {
+            "type": "text",
+            "id": "button_Text",
+            "label": "ring-Button"
+        },
+      {
+        "type": "text",
+        "id": "btn_underline1",
+        "label": "Under-butn1"
+      },
+        {
+            "type": "image_picker",
+            "id": "timeless_img",
+            "label": "select Timeless image"
+        },
+        {
+            "type": "text",
+            "id": "eth_timeless_heading",
+            "label": "Timeless-Heading"
+        },
+        {
+            "type": "text",
+            "id": "Timeless_description",
+            "label": "Description"
+        },
+        {
+            "type": "text",
+            "id": "button_timeless",
+            "label": "Timeless-Button"
+        },
+        {
+        "type": "text",
+        "id": "btn_underline2",
+        "label": "Under-butn2"
+      },
+      {
+          "type": "range",
+          "id": "image_height",
+          "min": 100,
+          "max": 800,
+          "step": 10,
+          "unit": "px",
+          "label": "Custom image height",
+          "default": 400
+        },
+         {
+            "type": "select",
+            "id": "position",
+            "label": "Block Position",
+            "options": [
+              { "value": "top-left", "label": "Top Left" },
+              { "value": "top-center", "label": "Top Center" },
+              { "value": "top-right", "label": "Top Right" },
+              { "value": "middle-left", "label": "Middle Left" },
+              { "value": "middle-center", "label": "Middle Center" },
+              { "value": "middle-right", "label": "Middle Right" },
+              { "value": "bottom-left", "label": "Bottom Left" },
+              { "value": "bottom-center", "label": "Bottom Center" },
+              { "value": "bottom-right", "label": "Bottom Right" }
+            ],
+            "default": "bottom-center"
+          }
+    ],
+    "presets": [
+      {
+        "name": "Ethical Beautiful"
+      }
+    ]
+  }
+{% endschema %}

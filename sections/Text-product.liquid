@@ -1,0 +1,113 @@
+
+<div class="textproduct-container">
+    <div class="textproduct-inner-container"> 
+                  <h2 class="moder-text">
+                      {{section.settings.text_1}}
+                      <span class="text-with-images__image zoom-in-effect" >
+                        <img src="{{ section.settings.image_1 | img_url: 'master' }}" alt="Image with Zoom Effect" >
+                      </span>
+                      {{section.settings.text_2}}
+                      <span class="text-with-images__image zoom-in-effect" >
+                        <img src="{{ section.settings.image_2 | img_url: 'master' }}" alt="Image with Zoom Effect" >
+                
+                      </span>
+                      {{section.settings.text_3}}
+                    
+                      <span class="text-with-images__image zoom-in-effect" >
+                        <img src="{{ section.settings.image_3 | img_url: 'master' | default: 'vogue.png' }}" alt="Image with Zoom Effect" >      
+                      </span>
+                      {{section.settings.text_4}}
+                      
+                    </h2>
+      </div>
+</div>
+      <style>
+        .textproduct-container {
+          padding-top: 60px;
+          padding-bottom: 40px;
+        }
+        .textproduct-inner-container {
+          padding-left: 50px;
+          padding-right: 50px;
+        }
+        h2.moder-text {
+          font-size: 54px;
+          font-weight: 700;
+          letter-spacing: 0.0em;
+          line-height: 1.2;
+          text-transform: uppercase;
+          text-align: center;
+      }
+        span.text-with-images__image.zoom-in-effect {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        img {
+          width: 118px;
+          height: 70px;
+        }
+        
+        @media (max-width: 989px) and (min-width: 750px) {
+             .textproduct-inner-container {
+                    padding-left: 30px;
+                  padding-right: 30px;
+        }
+        }
+        @media (max-width: 749px) {
+             .textproduct-inner-container {
+                    padding-left: 16px;
+                  padding-right: 16px;
+        }
+           h2.moder-text {
+             text-align: left;
+             font-size: 52px;
+           }
+        }
+      </style>
+{% schema %}
+{
+    "name": "Text-product",
+    "settings": [
+      {
+        "type": "text",
+        "id": "text_1",
+        "label": "first Text"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_1",
+        "label": "First image"
+      },
+      {
+        "type": "text",
+        "id": "text_2",
+        "label": "second Text"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_2",
+        "label": "Second image"
+      },
+      {
+        "type": "text",
+        "id": "text_3",
+        "label": "Third Text"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_3",
+        "label": "Third image"
+      },
+      {
+        "type": "text",
+        "id": "text_4",
+        "label": "fourth Text"
+      }
+        ],
+        "presets": [
+            {
+                "name": "Text-Product"
+            }
+        ]
+}
+{% endschema %}

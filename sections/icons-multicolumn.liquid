@@ -1,0 +1,244 @@
+{{ 'icons_multicolumn.css' | asset_url | stylesheet_tag }}
+
+{% render 'icons_multicolumn' %}
+
+
+<div class="icons_multicolumn">
+  <div class="icon_inner_multicolum">
+    <div class="icon-multicolumn-Content">
+      {% for block in section.blocks %}
+        <div class="icon_grid_item_column">
+          <div class="icon_column-media" style="width: {{ block.settings.media_width }}px;">
+            {% if block.settings.image !=blank %}
+                 <img src="{{ block.settings.image | img_url: '300x' }}"  alt="{{ block.settings.image.alt | escape }}"/>
+            {% elsif block.settings.svg_code != blank %}
+              {{ block.settings.svg_code }}
+            {% endif %}
+          </div>
+          <div class="icon_column-content" >
+            {% if block.settings.heading != blank %}
+              <h2 class="icon_column-heading">{{ block.settings.heading }}</h2>
+            {% endif %}
+            
+            {% if block.settings.description != blank %}
+              <div class="icon_column-description">{{ block.settings.description }}</div>
+            {% endif %}
+          </div>
+          
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+<style>
+   .icon-multicolumn-Content {
+    display: grid;
+    gap: 32px;
+  }
+  @media (max-width: 989px) {
+     .icon-multicolumn-Content {
+          gap: 22px;
+  }
+  }
+  @media (min-width: 750px) {
+     .icon-multicolumn-Content {
+      grid-template-columns: repeat({{section.settings.columns_desktop}}, 1fr);
+    }
+  }
+   @media (max-width: 749px) {
+     .icon-multicolumn-Content {
+     grid-template-columns: repeat({{section.settings.columns_mobile}}, 1fr);
+       gap: 16px;
+    }
+  }
+  .icon_inner_multicolum {
+      margin: 0 auto;
+      padding-left: {{section.settings.padding_left}}px;
+      padding-right: {{section.settings.padding_right}}px;
+  }
+  @media (min-width: 1400px) {
+      .icon_inner_multicolum {
+      width: 80vw;
+  }
+  }
+    @media (max-width: 1399px) and (min-width: 1110px){
+      .icon_inner_multicolum {
+      width: 1100px;
+  }
+  } 
+  @media (max-width: 989px) {
+      .icon_inner_multicolum {
+      padding-left: 30px;
+      padding-right: 30px;
+  }
+  }
+    @media (max-width: 749px) {
+      .icon_inner_multicolum {
+      padding-left: 16px;
+      padding-right: 16px;
+  }
+        .icons_multicolumn {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  }
+  .icons_multicolumn {
+    padding-top: {{section.settings.padding_top}}px;
+    padding-bottom: {{section.settings.padding_bottom}}px;
+  }
+  .icon_grid_item_column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .icon_column-description {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+  h2.icon_column-heading {
+    font-weight: 700;
+  }
+</style>
+{% schema %}
+  {
+    "name": "Icons MultiColumns",
+    "settings": [
+           {
+          "type": "range",
+          "id": "columns_desktop",
+          "min": 3,
+          "max": 5,
+          "step": 1,
+          "default": 4,
+          "label": "Number of columns on desktop"
+            },
+              {
+          "type": "select",
+          "id": "columns_mobile",
+          "options": [
+            {
+              "value": "1",
+              "label": "1 column"
+            },
+            {
+              "value": "2",
+              "label": "2 columns"
+            }
+          ],
+          "default": "1",
+          "label": "Number of columns on mobile"
+          },
+              {
+          "type": "range",
+          "id": "padding_top",
+          "min": 0,
+          "max": 100,
+          "step": 4,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_top",
+          "default": 36
+          },
+          {
+          "type": "range",
+          "id": "padding_bottom",
+          "min": 0,
+          "max": 100,
+          "step": 4,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_bottom",
+          "default": 36
+          },
+       {
+      "type": "range",
+      "id": "padding_left",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding left",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_right",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding right",
+      "default": 20
+    },
+    {
+      "type": "select",
+      "id": "column_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+          {
+          "value": "right",
+          "label": "right"
+        }
+      ],
+      "default": "left",
+      "label": "Left"
+    }
+    ],
+    "blocks": [
+      {
+      "type": "column",
+      "name": "Column",
+      "settings": [
+   
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "Only visible when 'Image' is selected above"
+        },
+        {
+          "type": "textarea",
+          "id": "svg_code",
+          "label": "SVG Code",
+          "info": "Paste your SVG code directly. Only visible when 'SVG' is selected above"
+        },
+             {
+          "type": "text",
+          "id": "heading",
+          "default": "Column heading",
+          "label": "Heading"
+        },
+             {
+          "type": "text",
+          "id": "description",
+          "default": "Column Description",
+          "label": "Description"
+        },
+        {
+          "type": "range",
+          "id": "media_width",
+          "min": 20,
+          "max": 150,
+          "step": 5,
+          "unit": "px",
+          "label": "Media width",
+          "default": 50
+        }
+      ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Icons MultiColumn"
+      }
+    ]
+  }
+{% endschema %}

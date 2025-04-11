@@ -1,0 +1,122 @@
+
+<div class="marquee-container" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px; background-color: {{ section.settings.news_bg_Color }};">
+  <div class="marquee-inner-container" >
+    <div class="press-marquee-content" >
+      {% for block in section.blocks %}
+        <div class="press-marquee-block" style="font-size: {{ section.settings.font_size }}px;">
+          {% if block.settings.press_image != blank %}
+            <img src="{{ block.settings.press_image | img_url: '200x' }}" alt="image here">
+          {% endif %}
+          <span >{{ block.settings.press_text }}</span>
+          </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<style>
+  
+  .marquee-container {
+    box-sizing: border-box;
+    overflow: hidden;
+    whitespace: nowrap;
+  }
+  .press-marquee-block{
+  display: inline-flex;
+  align-items: center;
+  margin-right: 40px;
+}
+.press-marquee-block img {
+  max-width: 100px;
+  height: auto;
+
+}
+  .press-marquee-content {
+    display: inline-flex;
+    align-items: center;
+   width: max-content; /* Allows content to expand without wrapping */
+    animation: marquee var(--marquee-speed, 33s) linear infinite;
+    font-weight: 600;
+  }
+   @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+  :root {
+    --marquee-speed: calc(50s / {{ section.settings.speed }}); /* Adjust speed */
+}
+</style>
+{% schema %}
+  {
+    "name": "Press Quote Marquee",
+    "settings": [   
+          {
+            "type": "color",
+            "id": "news_bg_Color",
+            "label": "Select Background Color"
+          },
+           {
+          "type": "range",
+          "id": "padding_top",
+          "label": "Padding Top",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "default": 20,
+          "unit": "px"
+        },
+        {
+          "type": "range",
+          "id": "padding_bottom",
+          "label": "Padding Bottom",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "default": 20,
+          "unit": "px"
+        },
+        {
+          "type": "range",
+          "id": "font_size",
+          "label": "Font Size",
+          "min": 12,
+          "max": 48,
+          "step": 1,
+          "default": 16,
+          "unit": "px"
+        },
+        {
+          "type": "range",
+          "id": "speed",          
+          "label": "Marquee Speed",
+          "min": 1,
+          "max": 10,
+          "step": 1,
+          "default": 5
+        }
+    ],
+    "blocks": [
+        {
+      "type": "quote",
+      "name": "Quote Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "press_image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "press_text",
+          "label": "Text",
+          "default": "Amazing-product"
+        }
+      ]
+    }
+    ],
+    "presets": [
+      {
+        "name": "Press Quote Marquee"
+      }
+    ]
+  }
+{% endschema %}

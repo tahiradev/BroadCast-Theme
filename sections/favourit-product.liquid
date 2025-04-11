@@ -1,0 +1,45 @@
+{{ 'fvrt_product.css' | asset_url | stylesheet_tag }}
+{% render 'fvrt_product' %}
+
+{% schema %}
+  {
+    "name": "Favourite Product",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "fp_bg_img",
+        "label": "Select image"
+      },
+      {
+        "type": "text",
+        "id": "fp_heading",
+        "label": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "fp_Discription",
+        "label": " Descrition"
+      },
+      {
+        "type": "url",
+        "id": "fp_button_link",
+        "label": "Button Link"
+      },
+      {
+        "type": "text",
+        "id": "fp_button_text",
+        "label": "Button Text"
+      },
+      {
+        "type": "product",
+        "id": "fp_selected_product",
+      "label": "Select a Product"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Favorit products"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,96 @@
+{{ 'Product-with-img-slider.css' | asset_url | stylesheet_tag }}
+{{ 'Product-with-img-slider.js' | asset_url | script_tag }}
+
+<div class="product-img-main-container">
+  <div class="Featured-Prod-contan-slid">
+    {% if section.settings.slid_featured_prod %}
+      <div class="Inner-prod-cond">
+        {% for product in section.settings.slid_featured_prod %}
+          <div class="Specific-product-item">
+        <a href="{{ product.url }}" class="product-detail">    <img src="{{ product.featured_image | image_url: width: 300 }}" alt="{{ product.title }}">
+           <!-- Quick ADD--->
+            <form method="post" action="/cart/add" class="quick-add-form">
+              <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+              <button type="submit" class="quick-add-btn" id= "slider-quick">Quick Add</button>
+            </form>
+            <div class= "product_content">
+            <h3>{{ product.title }}</h3>
+            <p>{{ product.price | money }}</p>
+                  <!-- Color Swatches -->
+    <div class="color-swatches">
+      {% assign color_option_index = 0 %}
+      {% for option in product.options_with_values %}
+        {% if option.name == 'Color' %}
+          {% assign color_option_index = forloop.index0 %}
+        {% endif %}
+      {% endfor %}
+
+      {% assign shown_colors = '' %}
+      {% for variant in product.variants %}
+        {% assign color = variant.options[color_option_index] %}
+        {% unless shown_colors contains color %}
+          <span
+            class="swatch"
+            style="background-color: {{ color | downcase }};"
+            data-variant-img="{{ variant.image | img_url: 'medium' }}"
+          ></span>
+          {% assign shown_colors = shown_colors | append: color %}
+        {% endunless %}
+      {% endfor %}
+    </div>
+            
+         </div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p>No featured products selected.</p>
+    {% endif %}
+  </div>
+
+  <!-- Image Slider Section -->
+  <div class="img-slider-container" style= "background-image: url('{{ section.settings.bg_img | img_url: "master" }}');" >
+    <div class="image-slider">
+      {% if section.settings.slider_img1 %}
+        <img src="{{ section.settings.slider_img1 | img_url: 'master' }}" alt="Slider Image 1" class="slider-image">
+      {% endif %}
+      {% if section.settings.slider_img2 %}
+        <img src="{{ section.settings.slider_img2 | img_url: 'master' }}" alt="Slider Image 2" class="slider-image">
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+    "name": "Product-img-slider",
+    "settings": [
+        {
+         "type":  "image_picker",
+         "id": "bg_img",
+         "label": "bg-img"  
+        },
+        {
+            "type": "image_picker",
+            "id": "slider_img1",
+            "label": "First Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "slider_img2",
+            "label": "Second Image"
+        },
+        {
+            "type": "product_list",
+            "id": "slid_featured_prod",
+            "label": "Select Featured Products"
+        }
+        ],
+        "presets": [
+            {
+                "name": "Product-img-slider"
+            }
+        ]
+}
+{% endschema %}

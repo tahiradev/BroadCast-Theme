@@ -1,0 +1,81 @@
+.hover-collections-wrapper {
+  display: flex;
+  background-size: cover;
+ background-position: center; 
+  color: white;
+  transition: background-image 0.5s ease;
+  position: relative;
+  transform: scale(1);
+  opacity: 1;
+}
+@media (min-width: 989px) {
+  .hover-collections-wrapper {
+      height: 650px;
+  }
+}
+  
+.hover-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.hover-collection-titles {
+  z-index: 2;
+     display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    margin: auto;
+    text-transform: uppercase;
+    color: white;
+}
+
+.hover-collection-titles h3 {
+  cursor: pointer;
+  margin: 0;
+  font-size: 7rem;
+  padding: 10px;
+  color: white;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  font-weight: 700;
+}
+@media (max-width: 749px) {
+  .hover-collection-titles h3 {
+     font-size: 4rem;
+  }
+  .hover-collection-titles {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+/* Hovered title gets full opacity */
+.hover-collection-titles h3:hover {
+  opacity: 1;
+}
+
+/* When hovering over the parent, all siblings stay dim except the hovered one */
+.hover-collection-titles:hover h3 {
+  opacity: 0.5;
+}
+.hover-collection-titles h3:hover {
+  opacity: 1;
+}
+  .hover-collection-titles h3.active {
+  opacity: 1;
+}
+.overlaybg-main-container {
+    padding-top: 100px;
+
+}
+  @media (max-width: 749px) {
+    .overlaybg-main-container {
+    padding-top: 20px;
+
+}
+  }

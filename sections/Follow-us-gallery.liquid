@@ -1,0 +1,69 @@
+{{ 'Follow-us-gallery.css' | asset_url | stylesheet_tag }} 
+
+{% render 'Follow_us_gallery' %}
+
+
+
+{% schema %}
+  {
+    "name": "Follow-us-gallery",
+    "settings": [
+      {
+        "type": "text",
+        "id": "captionid",
+        "label": "caption"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      },
+     {
+        "type": "select",
+        "id": "image_ratio",
+        "label": "Image ratio",
+        "options": [
+          {
+            "value": "adapt",
+            "label": "Adapt to image"
+          },
+          {
+            "value": "square",
+            "label": "Square (1:1)"
+          },
+          {
+            "value": "portrait",
+            "label": "Portrait (2:3)"
+          },
+          {
+            "value": "landscape",
+            "label": "Landscape (4:3)"
+          },
+          {
+            "value": "wide",
+            "label": "Wide (16:9)"
+          }
+        ],
+        "default": "adapt"
+      }
+    ], 
+    "blocks": [
+    {
+      "type": "image",
+      "name": "Image-Gallery",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "follow_img",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+    "presets": [
+      {
+        "name": "Follow-us-gallery"
+      }
+    ]
+  }
+{% endschema %}

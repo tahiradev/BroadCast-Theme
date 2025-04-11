@@ -1,0 +1,78 @@
+
+<div class=" Timeline-main-container ">
+  <div class="Timeline-wrapper">
+    <div class="Timeline-inner">
+      <div class="Timline-row"></div>
+      <div class="Timline-row"></div>
+      <div class="Timline-row">
+            {% for block in section.blocks %}
+        {% if block.type == 'Timeline_content' %}
+          <div class="timeline-row-content">
+          <div class="timeline-content">
+            <p>{{ block.settings.tim_listnum }}</p>
+            <h2>{{ block.settings.tim_heading }}</h2>
+            <p>{{ block.settings.tim_descript}}</p>
+          </div>
+            <div class="timeline-row-image">
+               {% if block.settings.timeline_img %}
+                  <img src="{{ block.settings.timeline_img | image_url: width: 800 }}" alt="Timeline Image" loading="lazy">
+                {% endif %}
+          </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+   </div>
+    </div>
+  </div>
+</div>
+<style>
+  .timeline-row-content {
+    display: flex;
+    align-items: center;
+  }
+</style>
+{% schema %}
+{
+  "name": "Timeline",
+  "settings": [
+    {
+      "type": "text",
+      "id": "cption1",
+      "label": "first cap"
+    }
+  ],
+   "blocks": [
+    {
+      "type": "Timeline_content",
+      "name": "Timeline Content",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tim_listnum",
+          "label": "list numbr"
+        },
+                {
+          "type": "text",
+          "id": "tim_heading",
+          "label": "heading"
+        },
+          {
+          "type": "text",
+          "id": "tim_descript",
+          "label": "Description"
+        },
+        {
+          "type": "image_picker",
+          "id": "timeline_img",
+          "label": "Timeline Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Timeline"
+    }
+  ]
+}
+{% endschema %}

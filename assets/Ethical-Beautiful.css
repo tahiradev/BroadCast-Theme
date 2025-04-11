@@ -1,0 +1,136 @@
+ .btn-underline {
+   color: white;
+   text-transform: uppercase;
+ }
+.beaut-buttons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+        .content-contain {
+            padding: 100px 0px 30px 50px;
+    }
+    .content-contain .cont-caption {
+        font-size: 1.5rem;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+    .content-contain .cont-head {
+        font-size: 48px;
+        font-weight: 600;
+        margin-top: 0px;
+        margin-bottom: 14px;
+        }
+      @media (max-width: 989px) {
+            .content-contain .cont-head {
+                font-size: 36px;
+        }
+      }
+      @media (max-width: 749px) {
+            .content-contain .cont-head {
+                font-size: 28px;
+        }
+      }
+        .content-contain .cont-discript {
+            font-size: 2rem;
+            font-weight: 500;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+    .Ethical-cards-cont {
+        display: flex;
+        width: 100%;
+        gap:32px;
+        max-width: none;
+        margin: 0 auto;
+        padding: 0px 50px 0px 50px;
+    }
+    .brick-block {
+        width: 100%;
+        position: relative;
+    }
+    .bg-image-contain img{
+        width: 100%;
+      /*  height: 450px; */
+        display: flex; 
+        align-items: center;
+        object-fit: cover;
+    }
+    .eth-overlay {
+        display: flex;
+        flex-direction: column;
+        padding: 50px; 
+        overflow-wrap: break-word;
+        color: white;
+        position: absolute;
+        bottom: 0;
+      text-align: center;
+      justify-content: center;
+    }
+    .overlay-heading, .overlay-para {
+        margin-top: 0px;
+        margin-bottom: 1rem;
+        
+    }
+    .overlay-para {
+        font-family:  'Montsarrat', sans-serif;
+    }
+   
+     .overlay-heading {
+        font-size: 36.8px;
+        font-family: "IT Noveresa",serif;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: 0.0em;
+        line-height: 1.2;
+       color: white;
+       text-align: left;
+    }
+        a.eth-button {
+        color: black;
+        text-decoration: none;
+     background-color: white;  
+        width: 122px;
+        text-align: center;
+        padding: 10px;
+
+   }
+
+    @media (min-width: 750px) {
+        .Ethical-cards-cont {
+            flex-wrap: nowrap;
+        }
+        .brick-block {
+          flex: 1 1 50%;
+        }
+    }
+    @media (max-width: 990px) and (min-width: 750px) {
+        .eth-overlay {
+        padding: 30px;
+    }
+    }
+    @media (max-width: 749px) { 
+    .Ethical-cards-cont {
+        display: flex; /* Maintain flex layout */
+        flex-direction: column; /* Stack containers vertically */
+        width: 100%; /* Ensure full width */
+        gap: 16px; /* Maintain gap between items */
+        padding: 0px 16px 82px 16px;
+    }
+
+    .brick-block {
+        width: 100%; /* Each container takes full width */
+        flex: 0 0 auto; /* Prevent shrinking or growing */
+    }
+    .eth-overlay {
+        padding: 15px;
+    }
+    .content-contain {
+           padding-left: 16px;
+           padding-right: 16px;
+    }
+}
+
+/* 
+
+*/

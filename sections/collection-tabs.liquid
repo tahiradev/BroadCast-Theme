@@ -1,0 +1,181 @@
+{{ 'collection-tabs.css' | asset_url | stylesheet_tag }}
+{{ 'collection-tabs.js' | asset_url | script_tag }}
+
+
+<div class="tabbed-collection-section">
+  <div class=" Tab-Heading-holder-container ">
+    <div class= " Tabs-heading ">
+      <h1>{{ section.settings.heading }}</h1>
+      <p>{{ section.settings.descript_text }}</p>
+    </div>
+  <div class="tabs">
+    <button class="tab-button active" data-tab="rings">{{ section.settings.tab1_name }}</button>
+    <button class="tab-button" data-tab="earrings">{{ section.settings.tab2_name }}</button>
+  </div>
+</div>
+  <div class= "slick-tab-content">
+  <div class="tab-content active" id="rings">
+    {% assign collection = collections[section.settings.rings_collection] %}
+    
+     {% if section.settings.show_image %}
+    <div class="custom-collection-image">
+      <a href="{{ collection.url }}">
+        <img src="{{ collection.image | img_url: 'master' }}" alt="{{ collection.title }}" class="collection-bg-image" />
+      </a>
+      <div class="collection-overlay">
+        <p class="collection-description">
+          14k solid gold essentials, sterling silver statement pieces and more.
+        </p>
+        <a href="{{ collection.url }}" class="collection-button">SHOP RINGS</a>
+      </div>
+    </div>
+  {% endif %}
+
+    <div class="slider">
+      {% for product in collection.products limit: 10 %}
+        <div class="slide">
+          <a href="{{ product.url }}">
+            <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
+          <!-- Quick ADD--->
+            <form method="post" action="/cart/add" class="quick-add-form">
+              <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+              <button type="submit" class="quick-add-btn">Quick Add</button>
+            </form>
+            <p>{{ product.title }}</p>
+            <p>{{ product.price | money }}</p>
+
+
+    <!-- Color Swatches -->
+    <div class="color-swatches">
+      {% assign color_option_index = 0 %}
+      {% for option in product.options_with_values %}
+        {% if option.name == 'Color' %}
+          {% assign color_option_index = forloop.index0 %}
+        {% endif %}
+      {% endfor %}
+
+      {% assign shown_colors = '' %}
+      {% for variant in product.variants %}
+        {% assign color = variant.options[color_option_index] %}
+        {% unless shown_colors contains color %}
+          <span
+            class="swatch"
+            style="background-color: {{ color | downcase }};"
+            data-variant-img="{{ variant.image | img_url: 'medium' }}"
+          ></span>
+          {% assign shown_colors = shown_colors | append: color %}
+        {% endunless %}
+      {% endfor %}
+    </div>
+            
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+  <div class="tab-content" id="earrings">
+    {% assign collection = collections[section.settings.earrings_collection] %}
+    {% if section.settings.show_image %}
+    <div class="custom-collection-image">
+      <a href="{{ collection.url }}">
+        <img src="{{ collection.image | img_url: 'master' }}" alt="{{ collection.title }}" class="collection-bg-image" />
+      </a>
+      <div class="collection-overlay">
+        <p class="collection-description">
+          14k solid gold essentials, sterling silver statement pieces and more.
+        </p>
+        <a href="{{ collection.url }}" class="collection-button">SHOP Earrings</a>
+      </div>
+    </div>
+  {% endif %}
+    <div class="slider">
+      {% for product in collection.products limit: 10 %}
+        <div class="slide">
+          <a href="{{ product.url }}">
+            <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
+                  <form method="post" action="/cart/add" class="quick-add-form">
+              <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+              <button type="submit" class="quick-add-btn">Quick Add</button>
+            </form>
+            <p>{{ product.title }}</p>
+             <p>{{ product.price}}</p>
+                  <!-- Color Swatches -->
+              <div class="color-swatches">
+                {% assign color_option_index = 0 %}
+                {% for option in product.options_with_values %}
+                  {% if option.name == 'Color' %}
+                    {% assign color_option_index = forloop.index0 %}
+                  {% endif %}
+                {% endfor %}
+          
+                {% assign shown_colors = '' %}
+                {% for variant in product.variants %}
+                  {% assign color = variant.options[color_option_index] %}
+                  {% unless shown_colors contains color %}
+                    <span
+                      class="swatch"
+                      style="background-color: {{ color | downcase }};"
+                      data-variant-img="{{ variant.image | img_url: 'medium' }}"
+                    ></span>
+                    {% assign shown_colors = shown_colors | append: color %}
+                  {% endunless %}
+                {% endfor %}
+              </div>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Tabbed Collection Slider",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "heading"
+    },
+    {
+      "type": "text",
+      "id": "descript_text",
+      "label": "Description"
+    },
+      {
+      "type": "text",
+      "id": "tab1_name",
+      "label": "First Tab"
+    },
+       {
+      "type": "text",
+      "id": "tab2_name",
+      "label": "Second Tab"
+    },
+
+
+    {
+      "type": "collection",
+      "id": "rings_collection",
+      "label": "Rings Collection"
+    },
+    {
+      "type": "collection",
+      "id": "earrings_collection",
+      "label": "Earrings Collection"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_image",
+      "label": "Show Image",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tabbed Collection Slider"
+    }
+  ]
+}
+{% endschema %}
