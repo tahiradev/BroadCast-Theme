@@ -483,10 +483,16 @@
           <p style="margin: 0;">{{ look_product.title }}</p>
         </a>
         <p style="margin: 0;">{{ look_product.price | money }}</p>
-        <form method="post" action="/cart/add">
-          <input type="hidden" name="id" value="{{ look_product.variants.first.id }}">
-          <button type="submit" style="margin-top: 10px;">Add to Cart</button>
-        </form>
+            <form class="ajax-add-to-cart-form">
+              <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+              <button type="submit" class="ajax-add-btn" {% unless product.available %}disabled{% endunless %}>
+                {% if product.available %}
+                  Add to Cart
+                {% else %}
+                  Pre-Order
+                {% endif %}
+              </button>
+            </form>
       </div>
     </div>
   </div>
