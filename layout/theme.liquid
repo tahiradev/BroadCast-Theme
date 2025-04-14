@@ -416,5 +416,45 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".ajax-add-to-cart-form").forEach(form => {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const variantId = form.querySelector('input[name="id"]').value;
+      const addButton = form.querySelector(".ajax-add-btn");
+      addButton.disabled = true;
+      addButton.innerText = "Adding...";
+
+      fetch("/cart/add.js", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          id: parseInt(variantId),
+          quantity: 1
+        })
+      })
+        .then(res => res.json())
+        .then(data => {
+          console.log("Added to cart:", data);
+          addButton.innerText = "Added!";
+          setTimeout(() => {
+            addButton.innerText = "Add to Cart";
+            addButton.disabled = false;
+          }, 1500);
+          // Optional: trigger cart drawer update here
+        })
+        .catch(err => {
+          console.error("Error adding to cart:", err);
+          addButton.innerText = "Error";
+        });
+    });
+  });
+});
+
+</script>
+    
   </body>
 </html>
