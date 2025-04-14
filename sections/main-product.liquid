@@ -473,9 +473,9 @@
                           </a>
                           <div>
                             <a href="{{ look_product.url }}">
-                              <p style="margin: 0;">{{ look_product.title }}</p>
+                              <p>{{ look_product.title }}</p>
                             </a>
-                            <p style="margin: 0;">{{ look_product.price | money }}</p>
+                            <p>{{ look_product.price | money }}</p>
                                 <form class="ajax-add-to-cart-form">
                                   <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
                                   <button type="submit" class="ajax-add-btn" {% unless product.available %}disabled{% endunless %}>
