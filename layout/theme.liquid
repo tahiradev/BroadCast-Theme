@@ -418,8 +418,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 <script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".ajax-add-to-cart-form").forEach(form => {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -437,42 +436,23 @@ document.addEventListener("DOMContentLoaded", function () {
           quantity: 1
         })
       })
-      .then(res => res.json())
-      .then(data => {
-        console.log("Added to cart:", data);
-        addButton.innerText = "Added!";
-        // ✅ Open the cart drawer
-        const cartDrawer = document.querySelector('cart-drawer');
-        if (cartDrawer) {
-          cartDrawer.open = true;
-
-          // ✅ Fetch latest cart HTML (this assumes Shopify section rendering support)
-          fetch('/?section_id=cart-drawer')
-            .then(res => res.text())
-            .then(html => {
-              const parser = new DOMParser();
-              const doc = parser.parseFromString(html, 'text/html');
-              const newDrawer = doc.querySelector('cart-drawer');
-              if (newDrawer && cartDrawer) {
-                cartDrawer.innerHTML = newDrawer.innerHTML;
-              }
-            });
-        }
-
-        setTimeout(() => {
-          addButton.innerText = "Add to Cart";
-          addButton.disabled = false;
-        }, 1500);
-      })
-      .catch(err => {
-        console.error("Error adding to cart:", err);
-        addButton.innerText = "Error";
-        addButton.disabled = false;
-      });
+        .then(res => res.json())
+        .then(data => {
+          console.log("Added to cart:", data);
+          addButton.innerText = "Added!";
+          setTimeout(() => {
+            addButton.innerText = "Add to Cart";
+            addButton.disabled = false;
+          }, 1500);
+          // Optional: trigger cart drawer update here
+        })
+        .catch(err => {
+          console.error("Error adding to cart:", err);
+          addButton.innerText = "Error";
+        });
     });
   });
 });
-</script>
 
 </script>
     
