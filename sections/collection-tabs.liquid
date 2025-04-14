@@ -38,15 +38,15 @@
             <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
           <!-- Quick ADD--->
       <form class="ajax-add-to-cart-form">
-  <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-  <button type="submit" class="ajax-add-btn" {% unless product.available %}disabled{% endunless %}>
-    {% if product.available %}
-      Add to Cart
-    {% else %}
-     Pre-Order
-    {% endif %}
-  </button>
-</form>
+          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+          <button type="submit" class="ajax-add-btn" {% unless product.available %}disabled{% endunless %}>
+            {% if product.available %}
+              Add to Cart
+            {% else %}
+             Pre-Order
+            {% endif %}
+          </button>
+        </form>
 
 
             <p>{{ product.title }}</p>
