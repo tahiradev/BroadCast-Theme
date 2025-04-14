@@ -1,1 +1,508 @@
-{"sections":{"image_banner":{"type":"image-banner","blocks":{"heading":{"type":"heading","settings":{"heading":"Everyday Luxury","heading_size":"h0"}},"text_FWGwEE":{"type":"text","settings":{"text":"Beautiful pieces to pass down for generations","text_style":"body"}},"button":{"type":"buttons","settings":{"button_label_1":"SHOP ALL PRODUCTS","button_link_1":"shopify:\/\/collections\/all","button_style_secondary_1":false,"button_label_2":"SHOP SALE","button_link_2":"#","button_style_secondary_2":false}}},"block_order":["heading","text_FWGwEE","button"],"settings":{"image":"shopify:\/\/shop_images\/broadcast-hero-gradient.webp","image_2":"shopify:\/\/shop_images\/broadcast-chelsea-9.webp","image_overlay_opacity":10,"image_height":"medium","mobile_image_height":"medium","image_behavior":"none","desktop_content_position":"bottom-left","desktop_content_alignment":"left","show_text_box":false,"color_scheme":"scheme-3","stack_images_on_mobile":false,"mobile_content_alignment":"center","show_text_below":false}},"text_product_LynggB":{"type":"Text-product","settings":{"text_1":"Shop our modern","image_1":"shopify:\/\/shop_images\/neck.webp","text_2":"heirlooms, bestselling fine jewelry","image_2":"shopify:\/\/shop_images\/ring.webp","text_3":"and elegant","image_3":"shopify:\/\/shop_images\/Broadcast_Jewelry_16-12.5_noise-removebg-preview.png","text_4":"treasures."}},"multi_product_rKt6UJ":{"type":"Multi-product","blocks":{"column_qHzptL":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/fullnj.webp","title":"The Essentials Collection","text":"<p>Our signature pieces designed to be worn everyday with subtle details in contemporary shapes. <\/p>","link_label":"SHOP CLASSICS","link":"#"}},"column_fcqmPp":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/earing.webp","title":"Modern Statement","text":"<p>Timeless and wearable earrings with a modern twist that add a touch of style to any outfit.<\/p>","link_label":"SHOP EARRINGS","link":"#"}},"column_rRYJqq":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/necklcs.webp","title":"Made-To-Order Jewelery","text":"<p>Handmade pieces that are carefully crafted to ensure that you'll love for a lifetime.<\/p>","link_label":"SHOP NOW","link":"#"}}},"block_order":["column_qHzptL","column_fcqmPp","column_rRYJqq"],"settings":{"title":"","heading_size":"h1","image_width":"full","image_ratio":"portrait","button_label":"","button_link":"","columns_desktop":3,"column_alignment":"left","background_style":"none","color_scheme":"","columns_mobile":"1","swipe_on_mobile":false,"padding_top":0,"padding_bottom":64}},"press_quote_marquee_gBxNBY":{"type":"Press-Quote-Marquee","blocks":{"quote_FdH7QA":{"type":"quote","settings":{"press_image":"shopify:\/\/shop_images\/marie_claire-logo-removebg-preview.png","press_text":"“Exquisite craftsmanship meets sustainable luxury.”"}},"quote_JNPxxd":{"type":"quote","settings":{"press_image":"shopify:\/\/shop_images\/vogue-removebg-preview.png","press_text":"“Impeccable design meets unmatched quality in every piece.\""}},"quote_LFmgnr":{"type":"quote","settings":{"press_image":"shopify:\/\/shop_images\/allure-logo-removebg-preview.png","press_text":"“Setting a new standard in chic, modern jewelry.\""}},"quote_LzewVD":{"type":"quote","settings":{"press_image":"shopify:\/\/shop_images\/marie_claire-logo-removebg-preview.png","press_text":"“Exquisite craftsmanship meets sustainable luxury.”"}},"quote_9zdUE9":{"type":"quote","settings":{"press_image":"shopify:\/\/shop_images\/vogue-removebg-preview.png","press_text":"“Impeccable design meets unmatched quality in every piece.\""}},"quote_Cd8WYf":{"type":"quote","settings":{"press_image":"shopify:\/\/shop_images\/allure-logo-removebg-preview.png","press_text":"“Setting a new standard in chic, modern jewelry.\""}}},"block_order":["quote_FdH7QA","quote_JNPxxd","quote_LFmgnr","quote_LzewVD","quote_9zdUE9","quote_Cd8WYf"],"settings":{"news_bg_Color":"#f5f2ec","padding_top":40,"padding_bottom":40,"font_size":20,"speed":3}},"product_with_img_slider_KGmtrC":{"type":"Product-with-img-slider","settings":{"bg_img":"shopify:\/\/shop_images\/bg-net-img.webp","slider_img1":"shopify:\/\/shop_images\/wer-erng.webp","slider_img2":"shopify:\/\/shop_images\/wear-earing.webp","slid_featured_prod":["adelaide-hoops"]}},"ethical_beautiful_cbVAGg":{"type":"Ethical-Beautiful","settings":{"heading":"Ethical is Beautiful","description":"We ensure our products contribute to the well-being of people and planet, towards a brighter future.","ring_img":"shopify:\/\/shop_images\/necklacse.webp","eth_ring_heading":"Elsworth necklace","ring_description":"Explore rings for your big moment, and all the little memories after.","button_Text":"SHOP NOW","btn_underline1":"","timeless_img":"shopify:\/\/shop_images\/Broadcast_Jewelry_9-7.5_noise.webp","eth_timeless_heading":"Modern and Timeless","Timeless_description":"Accessorize with 14k recycled gold all day, everyday.","button_timeless":"SHOP NOW","btn_underline2":"","image_height":460,"position":"bottom-left"}},"overlay_bg_product_y6fAKL":{"type":"overlay-bg-product","blocks":{"collection_c3HyPB":{"type":"collection","settings":{"collection":"rings"}},"collection_fzwmi3":{"type":"collection","settings":{"collection":"bestsellers"}},"collection_TfaaCP":{"type":"collection","settings":{"collection":"bracelet"}},"collection_RGbLM3":{"type":"collection","settings":{"collection":"earings"}},"collection_hBtcU8":{"type":"collection","settings":{"collection":"necklaces"}}},"block_order":["collection_c3HyPB","collection_fzwmi3","collection_TfaaCP","collection_RGbLM3","collection_hBtcU8"],"settings":{}},"shop_look_WE3z7e":{"type":"Shop-look","settings":{"eimage":"shopify:\/\/shop_images\/Jewelry_37-editnoiseandsat.webp","featured_products":["adelaide-hoops","ilona-signet-ring"],"caption":"SHOP LOOk"}},"image_with_product_YrqEna":{"type":"image-with-product","blocks":{"caption_dDPpwD":{"type":"caption","settings":{"caption":"Trends & Tradition","text_style":"caption-with-letter-spacing","text_size":"medium"}},"heading_aibhbq":{"type":"heading","settings":{"heading":"For Everyday Wear","heading_size":"h1"}},"text_4kkKNk":{"type":"text","settings":{"text":"<p>From dainty classics that are perfect for daily adornment to chic, to trendsetting pieces designed to complement any occasion – our selection blends exquisite craftsmanship with modern sensibility.<\/p>","text_style":"body"}},"collection_wBTpgr":{"type":"Collection","settings":{"selected_collections":["best-sellers","new"]}}},"block_order":["caption_dDPpwD","heading_aibhbq","text_4kkKNk","collection_wBTpgr"],"settings":{"image":"shopify:\/\/shop_images\/Jewelry_36.webp","height":"medium","desktop_image_width":"medium","layout":"image_first","image_behavior":"none","content_layout":"no-overlap","desktop_content_position":"middle","desktop_content_alignment":"center","mobile_content_alignment":"center","section_color_scheme":"","color_scheme":"","padding_top":84,"padding_bottom":84,"selected_collections":[]}},"collection_tabs_kVgi9U":{"type":"collection-tabs","settings":{"heading":"Exceptional Pieces","descript_text":"Soon-to-be staples in your rotation","tab1_name":"Ring","tab2_name":"Earrings","rings_collection":"ring","earrings_collection":"earrings","show_image":true}},"favourit_product_yxmWUK":{"type":"favourit-product","settings":{"fp_bg_img":"shopify:\/\/shop_images\/Broadcast_Jewelry_10-10_noise_1.jpg","fp_heading":"Your favorite, now on sale!","fp_Discription":"Available in both 14k gold and sterling silver","fp_button_link":"#","fp_button_text":"SHOP NOW","fp_selected_product":"miro-signet-ring-in-gold"}},"follow_us_gallery_kgBt6G":{"type":"Follow-us-gallery","blocks":{"image_pBL3wM":{"type":"image","settings":{"follow_img":"shopify:\/\/shop_images\/Jewelry_14-editnoiseandsat.webp"}},"image_drN9Xc":{"type":"image","settings":{"follow_img":"shopify:\/\/shop_images\/braclt.webp"}},"image_ATBWhK":{"type":"image","settings":{"follow_img":"shopify:\/\/shop_images\/girls-earing.webp"}},"image_my8RXB":{"type":"image","settings":{"follow_img":"shopify:\/\/shop_images\/girl-ring.webp"}}},"block_order":["image_pBL3wM","image_drN9Xc","image_ATBWhK","image_my8RXB"],"settings":{"captionid":"Follow us","heading":"@broadcastjewelry","image_ratio":"square"}},"icons_multicolumn_UY7CDc":{"type":"icons-multicolumn","blocks":{"column_nNgHE7":{"type":"column","settings":{"svg_code":"<svg aria-hidden=\"true\" focusable=\"false\" role=\"presentation\" class=\"icon icon-flare\" viewbox=\"0 0 24 24\" style=\"width: 50px; height: 50px; fill: none; stroke: #000;\">\n  <path d=\"M11.456 2.665a.6.6 0 0 1 1.088 0l2.864 6.137a.6.6 0 0 0 .29.29l6.137 2.864a.6.6 0 0 1 0 1.088l-6.137 2.864a.6.6 0 0 0-.29.29l-2.864 6.137a.6.6 0 0 1-1.088 0l-2.864-6.137a.6.6 0 0 0-.29-.29l-6.137-2.864a.6.6 0 0 1 0-1.088l6.137-2.864a.6.6 0 0 0 .29-.29l2.864-6.137z\" stroke=\"#000\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\">\n  <\/path>\n<\/svg>","heading":"Ethical Sourcing","description":"Fully traceable supply chain","media_width":150}},"column_6LLPXJ":{"type":"column","settings":{"svg_code":"<svg aria-hidden=\"true\" focusable=\"false\" role=\"presentation\" class=\"icon icon-donation\" viewbox=\"0 0 24 24\" style=\"width: 50px; height: 50px; fill: none; stroke: #000;\"><path d=\"M16 6.28a2.28 2.28 0 0 1-.662 1.606c-.976.984-1.923 2.01-2.936 2.958a.597.597 0 0 1-.822-.017l-2.918-2.94a2.281 2.281 0 0 1 0-3.214 2.277 2.277 0 0 1 3.232 0L12 4.78l.106-.107A2.276 2.276 0 0 1 16 6.28z\" stroke=\"#000\" stroke-linejoin=\"round\"><\/path><path d=\"m18 20 3.824-3.824a.6.6 0 0 0 .176-.424V10.5A1.5 1.5 0 0 0 20.5 9v0a1.5 1.5 0 0 0-1.5 1.5V15\" stroke=\"#000\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><path d=\"m18 16 .858-.858a.484.484 0 0 0 .142-.343v0a.485.485 0 0 0-.268-.433l-.443-.221a2 2 0 0 0-2.308.374l-.895.895a2 2 0 0 0-.586 1.414V20M6 20l-3.824-3.824A.6.6 0 0 1 2 15.752V10.5A1.5 1.5 0 0 1 3.5 9v0A1.5 1.5 0 0 1 5 10.5V15\" stroke=\"#000\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><path d=\"m6 16-.858-.858A.485.485 0 0 1 5 14.799v0c0-.183.104-.35.268-.433l.443-.221a2 2 0 0 1 2.308.374l.895.895a2 2 0 0 1 .586 1.414V20\" stroke=\"#000\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg>","heading":"Giving Back","description":"1% to orgs and communities","media_width":50}},"column_UFxXnx":{"type":"column","settings":{"svg_code":"<svg aria-hidden=\"true\" focusable=\"false\" role=\"presentation\" class=\"icon icon-chat\" viewbox=\"0 0 24 24\" style=\"width: 50px; height: 50px; fill: none; stroke: #000;\"><path d=\"M7.5 22a5.5 5.5 0 1 0-4.764-2.75l-.461 2.475 2.475-.46A5.474 5.474 0 0 0 7.5 22z\" stroke=\"#000\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><path d=\"M15.282 17.898A7.946 7.946 0 0 0 18 16.93l3.6.67-.67-3.6A8 8 0 1 0 6.083 8.849\" stroke=\"#000\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg>","heading":"On Demand Stylists","description":"Available everyday","media_width":100}}},"block_order":["column_nNgHE7","column_6LLPXJ","column_UFxXnx"],"settings":{"columns_desktop":3,"columns_mobile":"2","padding_top":52,"padding_bottom":52,"padding_left":50,"padding_right":50,"column_alignment":"right"}},"timeline_sec_JgfqKh":{"type":"Timeline-sec","blocks":{"timeline_content_bE3qVB":{"type":"Timeline_content","settings":{"tim_listnum":"Commitment #1","tim_heading":"Quality & Care","tim_descript":"Most of the jewelry is 14k gold filled, sterling silver, or rose gold filled. The best jewelry is always well-cared for. Knowing the best ways to maintain your jewelry can keep your precious pieces looking great for life.","timeline_img":"shopify:\/\/shop_images\/dblring.webp"}},"timeline_content_GfhNj9":{"type":"Timeline_content","settings":{"tim_listnum":"Commitment #2","tim_heading":"Giving Back","tim_descript":"1% of all of our profits are donated to the ATC foundation to combat deforestation. We do our part by using non-harmful, compostable packaging materials. All of our ingredients are naturally sourced and biodegradable.","timeline_img":"shopify:\/\/shop_images\/DTS_Daniel_Faro_Treasure_036-2.webp"}},"timeline_content_bx9CmV":{"type":"Timeline_content","settings":{"tim_listnum":"Commitment #3","tim_heading":"Community Oriented","tim_descript":"We partner with various organizations in our areas that support creative endeavours for underrepresented communities and arts & crafts programs for youth and children. We want to help people pursue their creativity!","timeline_img":"shopify:\/\/shop_images\/DTS_Daniel_Faro_Treasure_001-2.webp"}}},"block_order":["timeline_content_bE3qVB","timeline_content_GfhNj9","timeline_content_bx9CmV"],"settings":{"cption1":""}}},"order":["image_banner","text_product_LynggB","multi_product_rKt6UJ","press_quote_marquee_gBxNBY","product_with_img_slider_KGmtrC","ethical_beautiful_cbVAGg","overlay_bg_product_y6fAKL","shop_look_WE3z7e","image_with_product_YrqEna","collection_tabs_kVgi9U","favourit_product_yxmWUK","follow_us_gallery_kgBt6G","icons_multicolumn_UY7CDc","timeline_sec_JgfqKh"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Everyday Luxury",
+            "heading_size": "h0"
+          }
+        },
+        "text_FWGwEE": {
+          "type": "text",
+          "settings": {
+            "text": "Beautiful pieces to pass down for generations",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "SHOP ALL PRODUCTS",
+            "button_link_1": "shopify://collections/all",
+            "button_style_secondary_1": false,
+            "button_label_2": "SHOP SALE",
+            "button_link_2": "#",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text_FWGwEE",
+        "button"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/broadcast-hero-gradient.webp",
+        "image_2": "shopify://shop_images/broadcast-chelsea-9.webp",
+        "image_overlay_opacity": 10,
+        "image_height": "medium",
+        "mobile_image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "bottom-left",
+        "desktop_content_alignment": "left",
+        "show_text_box": false,
+        "color_scheme": "scheme-3",
+        "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
+    "text_product_LynggB": {
+      "type": "Text-product",
+      "settings": {
+        "text_1": "Shop our modern",
+        "image_1": "shopify://shop_images/neck.webp",
+        "text_2": "heirlooms, bestselling fine jewelry",
+        "image_2": "shopify://shop_images/ring.webp",
+        "text_3": "and elegant",
+        "image_3": "shopify://shop_images/Broadcast_Jewelry_16-12.5_noise-removebg-preview.png",
+        "text_4": "treasures."
+      }
+    },
+    "multi_product_rKt6UJ": {
+      "type": "Multi-product",
+      "blocks": {
+        "column_qHzptL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/fullnj.webp",
+            "title": "The Essentials Collection",
+            "text": "<p>Our signature pieces designed to be worn everyday with subtle details in contemporary shapes. </p>",
+            "link_label": "SHOP CLASSICS",
+            "link": "#"
+          }
+        },
+        "column_fcqmPp": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/earing.webp",
+            "title": "Modern Statement",
+            "text": "<p>Timeless and wearable earrings with a modern twist that add a touch of style to any outfit.</p>",
+            "link_label": "SHOP EARRINGS",
+            "link": "#"
+          }
+        },
+        "column_rRYJqq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/necklcs.webp",
+            "title": "Made-To-Order Jewelery",
+            "text": "<p>Handmade pieces that are carefully crafted to ensure that you'll love for a lifetime.</p>",
+            "link_label": "SHOP NOW",
+            "link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "column_qHzptL",
+        "column_fcqmPp",
+        "column_rRYJqq"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 64
+      }
+    },
+    "press_quote_marquee_gBxNBY": {
+      "type": "Press-Quote-Marquee",
+      "blocks": {
+        "quote_FdH7QA": {
+          "type": "quote",
+          "settings": {
+            "press_image": "shopify://shop_images/marie_claire-logo-removebg-preview.png",
+            "press_text": "“Exquisite craftsmanship meets sustainable luxury.”"
+          }
+        },
+        "quote_JNPxxd": {
+          "type": "quote",
+          "settings": {
+            "press_image": "shopify://shop_images/vogue-removebg-preview.png",
+            "press_text": "“Impeccable design meets unmatched quality in every piece.\""
+          }
+        },
+        "quote_LFmgnr": {
+          "type": "quote",
+          "settings": {
+            "press_image": "shopify://shop_images/allure-logo-removebg-preview.png",
+            "press_text": "“Setting a new standard in chic, modern jewelry.\""
+          }
+        },
+        "quote_LzewVD": {
+          "type": "quote",
+          "settings": {
+            "press_image": "shopify://shop_images/marie_claire-logo-removebg-preview.png",
+            "press_text": "“Exquisite craftsmanship meets sustainable luxury.”"
+          }
+        },
+        "quote_9zdUE9": {
+          "type": "quote",
+          "settings": {
+            "press_image": "shopify://shop_images/vogue-removebg-preview.png",
+            "press_text": "“Impeccable design meets unmatched quality in every piece.\""
+          }
+        },
+        "quote_Cd8WYf": {
+          "type": "quote",
+          "settings": {
+            "press_image": "shopify://shop_images/allure-logo-removebg-preview.png",
+            "press_text": "“Setting a new standard in chic, modern jewelry.\""
+          }
+        }
+      },
+      "block_order": [
+        "quote_FdH7QA",
+        "quote_JNPxxd",
+        "quote_LFmgnr",
+        "quote_LzewVD",
+        "quote_9zdUE9",
+        "quote_Cd8WYf"
+      ],
+      "settings": {
+        "news_bg_Color": "#f5f2ec",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "font_size": 20,
+        "speed": 3
+      }
+    },
+    "product_with_img_slider_KGmtrC": {
+      "type": "Product-with-img-slider",
+      "settings": {
+        "bg_img": "shopify://shop_images/bg-net-img.webp",
+        "slider_img1": "shopify://shop_images/wer-erng.webp",
+        "slider_img2": "shopify://shop_images/wear-earing.webp",
+        "slid_featured_prod": [
+          "adelaide-hoops"
+        ]
+      }
+    },
+    "ethical_beautiful_cbVAGg": {
+      "type": "Ethical-Beautiful",
+      "settings": {
+        "heading": "Ethical is Beautiful",
+        "description": "We ensure our products contribute to the well-being of people and planet, towards a brighter future.",
+        "ring_img": "shopify://shop_images/necklacse.webp",
+        "eth_ring_heading": "Elsworth necklace",
+        "ring_description": "Explore rings for your big moment, and all the little memories after.",
+        "button_Text": "SHOP NOW",
+        "btn_underline1": "",
+        "timeless_img": "shopify://shop_images/Broadcast_Jewelry_9-7.5_noise.webp",
+        "eth_timeless_heading": "Modern and Timeless",
+        "Timeless_description": "Accessorize with 14k recycled gold all day, everyday.",
+        "button_timeless": "SHOP NOW",
+        "btn_underline2": "",
+        "image_height": 460,
+        "position": "bottom-left"
+      }
+    },
+    "overlay_bg_product_y6fAKL": {
+      "type": "overlay-bg-product",
+      "blocks": {
+        "collection_c3HyPB": {
+          "type": "collection",
+          "settings": {
+            "collection": "rings"
+          }
+        },
+        "collection_fzwmi3": {
+          "type": "collection",
+          "settings": {
+            "collection": "bestsellers"
+          }
+        },
+        "collection_TfaaCP": {
+          "type": "collection",
+          "settings": {
+            "collection": "bracelet"
+          }
+        },
+        "collection_RGbLM3": {
+          "type": "collection",
+          "settings": {
+            "collection": "earings"
+          }
+        },
+        "collection_hBtcU8": {
+          "type": "collection",
+          "settings": {
+            "collection": "necklaces"
+          }
+        }
+      },
+      "block_order": [
+        "collection_c3HyPB",
+        "collection_fzwmi3",
+        "collection_TfaaCP",
+        "collection_RGbLM3",
+        "collection_hBtcU8"
+      ],
+      "settings": {}
+    },
+    "shop_look_WE3z7e": {
+      "type": "Shop-look",
+      "settings": {
+        "eimage": "shopify://shop_images/Jewelry_37-editnoiseandsat.webp",
+        "featured_products": [
+          "adelaide-hoops",
+          "ilona-signet-ring"
+        ],
+        "caption": "SHOP LOOk"
+      }
+    },
+    "image_with_product_YrqEna": {
+      "type": "image-with-product",
+      "blocks": {
+        "caption_dDPpwD": {
+          "type": "caption",
+          "settings": {
+            "caption": "Trends & Tradition",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_aibhbq": {
+          "type": "heading",
+          "settings": {
+            "heading": "For Everyday Wear",
+            "heading_size": "h1"
+          }
+        },
+        "text_4kkKNk": {
+          "type": "text",
+          "settings": {
+            "text": "<p>From dainty classics that are perfect for daily adornment to chic, to trendsetting pieces designed to complement any occasion – our selection blends exquisite craftsmanship with modern sensibility.</p>",
+            "text_style": "body"
+          }
+        },
+        "collection_wBTpgr": {
+          "type": "Collection",
+          "settings": {
+            "selected_collections": [
+              "best-sellers",
+              "new"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "caption_dDPpwD",
+        "heading_aibhbq",
+        "text_4kkKNk",
+        "collection_wBTpgr"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Jewelry_36.webp",
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 84,
+        "padding_bottom": 84,
+        "selected_collections": []
+      }
+    },
+    "collection_tabs_kVgi9U": {
+      "type": "collection-tabs",
+      "settings": {
+        "heading": "Exceptional Pieces",
+        "descript_text": "Soon-to-be staples in your rotation",
+        "tab1_name": "Ring",
+        "tab2_name": "Earrings",
+        "rings_collection": "ring",
+        "earrings_collection": "earrings",
+        "show_image": true
+      }
+    },
+    "favourit_product_yxmWUK": {
+      "type": "favourit-product",
+      "settings": {
+        "fp_bg_img": "shopify://shop_images/Broadcast_Jewelry_10-10_noise_1.jpg",
+        "fp_heading": "Your favorite, now on sale!",
+        "fp_Discription": "Available in both 14k gold and sterling silver",
+        "fp_button_link": "#",
+        "fp_button_text": "SHOP NOW",
+        "fp_selected_product": "miro-signet-ring-in-gold"
+      }
+    },
+    "follow_us_gallery_kgBt6G": {
+      "type": "Follow-us-gallery",
+      "blocks": {
+        "image_pBL3wM": {
+          "type": "image",
+          "settings": {
+            "follow_img": "shopify://shop_images/Jewelry_14-editnoiseandsat.webp"
+          }
+        },
+        "image_drN9Xc": {
+          "type": "image",
+          "settings": {
+            "follow_img": "shopify://shop_images/braclt.webp"
+          }
+        },
+        "image_ATBWhK": {
+          "type": "image",
+          "settings": {
+            "follow_img": "shopify://shop_images/girls-earing.webp"
+          }
+        },
+        "image_my8RXB": {
+          "type": "image",
+          "settings": {
+            "follow_img": "shopify://shop_images/girl-ring.webp"
+          }
+        }
+      },
+      "block_order": [
+        "image_pBL3wM",
+        "image_drN9Xc",
+        "image_ATBWhK",
+        "image_my8RXB"
+      ],
+      "settings": {
+        "captionid": "Follow us",
+        "heading": "@broadcastjewelry",
+        "image_ratio": "square"
+      }
+    },
+    "icons_multicolumn_UY7CDc": {
+      "type": "icons-multicolumn",
+      "blocks": {
+        "column_nNgHE7": {
+          "type": "column",
+          "settings": {
+            "svg_code": "<svg aria-hidden=\"true\" focusable=\"false\" role=\"presentation\" class=\"icon icon-flare\" viewbox=\"0 0 24 24\" style=\"width: 50px; height: 50px; fill: none; stroke: #000;\">\n  <path d=\"M11.456 2.665a.6.6 0 0 1 1.088 0l2.864 6.137a.6.6 0 0 0 .29.29l6.137 2.864a.6.6 0 0 1 0 1.088l-6.137 2.864a.6.6 0 0 0-.29.29l-2.864 6.137a.6.6 0 0 1-1.088 0l-2.864-6.137a.6.6 0 0 0-.29-.29l-6.137-2.864a.6.6 0 0 1 0-1.088l6.137-2.864a.6.6 0 0 0 .29-.29l2.864-6.137z\" stroke=\"#000\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\">\n  </path>\n</svg>",
+            "heading": "Ethical Sourcing",
+            "description": "Fully traceable supply chain",
+            "media_width": 150
+          }
+        },
+        "column_6LLPXJ": {
+          "type": "column",
+          "settings": {
+            "svg_code": "<svg aria-hidden=\"true\" focusable=\"false\" role=\"presentation\" class=\"icon icon-donation\" viewbox=\"0 0 24 24\" style=\"width: 50px; height: 50px; fill: none; stroke: #000;\"><path d=\"M16 6.28a2.28 2.28 0 0 1-.662 1.606c-.976.984-1.923 2.01-2.936 2.958a.597.597 0 0 1-.822-.017l-2.918-2.94a2.281 2.281 0 0 1 0-3.214 2.277 2.277 0 0 1 3.232 0L12 4.78l.106-.107A2.276 2.276 0 0 1 16 6.28z\" stroke=\"#000\" stroke-linejoin=\"round\"></path><path d=\"m18 20 3.824-3.824a.6.6 0 0 0 .176-.424V10.5A1.5 1.5 0 0 0 20.5 9v0a1.5 1.5 0 0 0-1.5 1.5V15\" stroke=\"#000\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path><path d=\"m18 16 .858-.858a.484.484 0 0 0 .142-.343v0a.485.485 0 0 0-.268-.433l-.443-.221a2 2 0 0 0-2.308.374l-.895.895a2 2 0 0 0-.586 1.414V20M6 20l-3.824-3.824A.6.6 0 0 1 2 15.752V10.5A1.5 1.5 0 0 1 3.5 9v0A1.5 1.5 0 0 1 5 10.5V15\" stroke=\"#000\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path><path d=\"m6 16-.858-.858A.485.485 0 0 1 5 14.799v0c0-.183.104-.35.268-.433l.443-.221a2 2 0 0 1 2.308.374l.895.895a2 2 0 0 1 .586 1.414V20\" stroke=\"#000\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>",
+            "heading": "Giving Back",
+            "description": "1% to orgs and communities",
+            "media_width": 50
+          }
+        },
+        "column_UFxXnx": {
+          "type": "column",
+          "settings": {
+            "svg_code": "<svg aria-hidden=\"true\" focusable=\"false\" role=\"presentation\" class=\"icon icon-chat\" viewbox=\"0 0 24 24\" style=\"width: 50px; height: 50px; fill: none; stroke: #000;\"><path d=\"M7.5 22a5.5 5.5 0 1 0-4.764-2.75l-.461 2.475 2.475-.46A5.474 5.474 0 0 0 7.5 22z\" stroke=\"#000\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path><path d=\"M15.282 17.898A7.946 7.946 0 0 0 18 16.93l3.6.67-.67-3.6A8 8 0 1 0 6.083 8.849\" stroke=\"#000\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>",
+            "heading": "On Demand Stylists",
+            "description": "Available everyday",
+            "media_width": 100
+          }
+        }
+      },
+      "block_order": [
+        "column_nNgHE7",
+        "column_6LLPXJ",
+        "column_UFxXnx"
+      ],
+      "settings": {
+        "columns_desktop": 3,
+        "columns_mobile": "2",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "padding_left": 50,
+        "padding_right": 50,
+        "column_alignment": "right"
+      }
+    },
+    "timeline_sec_JgfqKh": {
+      "type": "Timeline-sec",
+      "blocks": {
+        "timeline_content_bE3qVB": {
+          "type": "Timeline_content",
+          "settings": {
+            "tim_listnum": "Commitment #1",
+            "tim_heading": "Quality & Care",
+            "tim_descript": "Most of the jewelry is 14k gold filled, sterling silver, or rose gold filled. The best jewelry is always well-cared for. Knowing the best ways to maintain your jewelry can keep your precious pieces looking great for life.",
+            "timeline_img": "shopify://shop_images/dblring.webp"
+          }
+        },
+        "timeline_content_GfhNj9": {
+          "type": "Timeline_content",
+          "settings": {
+            "tim_listnum": "Commitment #2",
+            "tim_heading": "Giving Back",
+            "tim_descript": "1% of all of our profits are donated to the ATC foundation to combat deforestation. We do our part by using non-harmful, compostable packaging materials. All of our ingredients are naturally sourced and biodegradable.",
+            "timeline_img": "shopify://shop_images/DTS_Daniel_Faro_Treasure_036-2.webp"
+          }
+        },
+        "timeline_content_bx9CmV": {
+          "type": "Timeline_content",
+          "settings": {
+            "tim_listnum": "Commitment #3",
+            "tim_heading": "Community Oriented",
+            "tim_descript": "We partner with various organizations in our areas that support creative endeavours for underrepresented communities and arts & crafts programs for youth and children. We want to help people pursue their creativity!",
+            "timeline_img": "shopify://shop_images/DTS_Daniel_Faro_Treasure_001-2.webp"
+          }
+        }
+      },
+      "block_order": [
+        "timeline_content_bE3qVB",
+        "timeline_content_GfhNj9",
+        "timeline_content_bx9CmV"
+      ],
+      "disabled": true,
+      "settings": {
+        "cption1": ""
+      }
+    },
+    "cart_button_wrnFBK": {
+      "type": "cart-button",
+      "settings": {
+        "first_text": "First Text of Cart Button"
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "text_product_LynggB",
+    "multi_product_rKt6UJ",
+    "press_quote_marquee_gBxNBY",
+    "product_with_img_slider_KGmtrC",
+    "ethical_beautiful_cbVAGg",
+    "overlay_bg_product_y6fAKL",
+    "shop_look_WE3z7e",
+    "image_with_product_YrqEna",
+    "collection_tabs_kVgi9U",
+    "favourit_product_yxmWUK",
+    "follow_us_gallery_kgBt6G",
+    "icons_multicolumn_UY7CDc",
+    "timeline_sec_JgfqKh",
+    "cart_button_wrnFBK"
+  ]
+}
