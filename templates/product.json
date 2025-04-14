@@ -58,6 +58,10 @@
         "contact_QYUjpC": {
           "type": "Contact",
           "settings": {}
+        },
+        "product_HxmAV7": {
+          "type": "product",
+          "settings": {}
         }
       },
       "block_order": [
@@ -69,7 +73,8 @@
         "buy_buttons",
         "description",
         "share",
-        "contact_QYUjpC"
+        "contact_QYUjpC",
+        "product_HxmAV7"
       ],
       "settings": {
         "enable_sticky_info": true,
