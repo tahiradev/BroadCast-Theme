@@ -37,16 +37,24 @@
           <a href="{{ product.url }}">
             <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
           <!-- Quick ADD--->
-      <form class="ajax-add-to-cart-form">
-          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-          <button type="submit" class="ajax-add-btn" {% unless product.available %}disabled{% endunless %}>
-            {% if product.available %}
-              Add to Cart
-            {% else %}
-             Pre-Order
-            {% endif %}
-          </button>
-        </form>
+<form method="post" action="/cart/add" class="product-form" id="ProductForm-{{ section.id }}" enctype="multipart/form-data">
+  <!-- Your existing variant selectors, etc. -->
+  
+  <div class="product-form__buttons">
+    <button
+      type="submit"
+      name="add"
+      class="product-form__submit button button--full-width {% if sold_out %}button--sold-out{% else %}button--primary{% endif %}"
+      {% if sold_out %}disabled{% endif %}
+    >
+      {% if sold_out %}
+        {{ 'products.product.sold_out' | t }}
+      {% else %}
+        {{ 'products.product.add_to_cart' | t }}
+      {% endif %}
+    </button>
+  </div>
+</form>
 
 
             <p>{{ product.title }}</p>
