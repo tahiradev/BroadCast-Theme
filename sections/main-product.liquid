@@ -464,12 +464,12 @@
                          {%- when 'product' -%}
                     <!-- Complete the Look Block -->
                     {% if product.metafields.custom.complete_the_look.value %}
-                      <div class="complete-look" style="margin-top: 30px; border-top: 1px solid #e1e1e1; padding-top: 20px;">
+                      <div class="complete-look">
                         <p><strong>Complete the look:</strong></p>
                         {% assign look_product = product.metafields.custom.complete_the_look.value %}
-                        <div style="display: flex; align-items: center;">
+                        <div>
                           <a href="{{ look_product.url }}">
-                            <img src="{{ look_product.featured_image | img_url: 'small' }}" alt="{{ look_product.title }}" style="width: 100px; margin-right: 20px;">
+                            <img src="{{ look_product.featured_image | img_url: 'small' }}" alt="{{ look_product.title }}">
                           </a>
                           <div>
                             <a href="{{ look_product.url }}">
