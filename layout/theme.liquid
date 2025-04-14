@@ -456,8 +456,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
  -->
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-  // Handle all product forms with AJAX
+ document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.product-form').forEach(form => {
     form.addEventListener('submit', async function(e) {
       e.preventDefault();
@@ -471,16 +470,37 @@ document.addEventListener('DOMContentLoaded', function () {
       submitButton.innerHTML = 'Adding...';
       
       try {
+        // Get the variant ID from the form
+        const formDataObject = {};
+        formData.forEach((value, key) => {
+          formDataObject[key] = value;
+        });
+        
+        // Ensure we have a variant ID
+        if (!formDataObject.id) {
+          throw new Error('No variant selected');
+        }
+        
+        // Create proper items array for Shopify API
+        const items = [{
+          id: formDataObject.id,
+          quantity: formDataObject.quantity || 1
+          // Add properties if needed: properties: {...}
+        }];
+        
         // Add item to cart via AJAX
         const response = await fetch('/cart/add.js', {
           method: 'POST',
-          body: formData
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ items })
         });
         
         const result = await response.json();
         
         if (response.ok) {
-          // Update cart count in header
+          // Update cart count
           fetch('/cart.js')
             .then(response => response.json())
             .then(cart => {
@@ -489,7 +509,7 @@ document.addEventListener('DOMContentLoaded', function () {
               });
             });
           
-          // Open the cart drawer
+          // Open cart drawer
           document.querySelector('cart-drawer').open();
         } else {
           console.error('Error adding to cart:', result.description);
@@ -497,7 +517,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       } catch (error) {
         console.error('Error:', error);
-        alert('An error occurred while adding to cart.');
+        alert(error.message || 'An error occurred while adding to cart.');
       } finally {
         // Reset button state
         submitButton.disabled = false;
