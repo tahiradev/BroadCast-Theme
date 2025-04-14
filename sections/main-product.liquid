@@ -462,6 +462,38 @@
                   render 'share-button', block: block, share_link: share_url
                 %}
 Add new features here for update in Product Page
+
+<!-- Static Block -->
+<div class="styling-help" style="margin-top: 30px; border-top: 1px solid #e1e1e1; padding-top: 20px;">
+  <p><strong>💬 Need styling help?</strong></p>
+  <p>Book an appointment with our virtual stylists! <a href="/pages/contact">Chat now</a></p>
+</div>
+
+<!-- Complete the Look Block -->
+{% if product.metafields.custom.complete_the_look.value %}
+  <div class="complete-look" style="margin-top: 30px; border-top: 1px solid #e1e1e1; padding-top: 20px;">
+    <p><strong>Complete the look:</strong></p>
+    {% assign look_product = product.metafields.custom.complete_the_look.value %}
+    <div style="display: flex; align-items: center;">
+      <a href="{{ look_product.url }}">
+        <img src="{{ look_product.featured_image | img_url: 'small' }}" alt="{{ look_product.title }}" style="width: 100px; margin-right: 20px;">
+      </a>
+      <div>
+        <a href="{{ look_product.url }}">
+          <p style="margin: 0;">{{ look_product.title }}</p>
+        </a>
+        <p style="margin: 0;">{{ look_product.price | money }}</p>
+        <form method="post" action="/cart/add">
+          <input type="hidden" name="id" value="{{ look_product.variants.first.id }}">
+          <button type="submit" style="margin-top: 10px;">Add to Cart</button>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+
+              
               {%- when 'variant_picker' -%}
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 
