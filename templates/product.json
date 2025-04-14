@@ -54,6 +54,10 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "contact_QYUjpC": {
+          "type": "Contact",
+          "settings": {}
         }
       },
       "block_order": [
@@ -64,7 +68,8 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "share"
+        "share",
+        "contact_QYUjpC"
       ],
       "settings": {
         "enable_sticky_info": true,
