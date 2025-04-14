@@ -14,11 +14,11 @@
                 <div class="shop-product-item">
                   <a href="{{ product.url }}">
                     <img src="{{ product.featured_image | image_url: width: 300 }}" alt="{{ product.title }}"></a>
-                <!-- Quick ADD--->
+                <!-- Quick ADD
             <form method="post" action="/cart/add" class="quick-add-form">
               <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
               <button type="submit" class="quick-add-btn">Quick Add</button>
-            </form>
+            </form> --->
                     <h3>{{ product.title }}</h3>
                     <p>{{ product.price | money }}</p>
                   
