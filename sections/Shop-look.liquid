@@ -1,5 +1,7 @@
 {{ 'shop-look.css' | asset_url | stylesheet_tag }}
+{% comment %}
 {{ 'shop-look.js' | asset_url | script_tag }}
+{% endcomment %}
 <div class="shop-main-container"> 
     <div class="img-container">
         {% if section.settings.eimage %}
