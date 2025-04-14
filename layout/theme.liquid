@@ -418,41 +418,64 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".ajax-add-to-cart-form").forEach(form => {
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const forms = document.querySelectorAll(".ajax-add-to-cart-form");
+
+  forms.forEach(form => {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
       const variantId = form.querySelector('input[name="id"]').value;
       const addButton = form.querySelector(".ajax-add-btn");
+
       addButton.disabled = true;
       addButton.innerText = "Adding...";
 
       fetch("/cart/add.js", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json"
+        },
         body: JSON.stringify({
           id: parseInt(variantId),
           quantity: 1
         })
       })
-        .then(res => res.json())
-        .then(data => {
-          console.log("Added to cart:", data);
-          addButton.innerText = "Added!";
-          setTimeout(() => {
-            addButton.innerText = "Add to Cart";
-            addButton.disabled = false;
-          }, 1500);
-          // Optional: trigger cart drawer update here
-        })
-        .catch(err => {
-          console.error("Error adding to cart:", err);
-          addButton.innerText = "Error";
-        });
+      .then(res => {
+        if (!res.ok) throw new Error("Add to cart failed");
+        return res.json();
+      })
+      .then(data => {
+        console.log("Added to cart:", data);
+        addButton.innerText = "Added!";
+
+        // Show cart drawer
+        if (window.Shopify && window.Shopify.theme && Shopify.theme.cartDrawer) {
+          Shopify.theme.cartDrawer.open();
+        } else {
+          document.querySelector('cart-drawer')?.open?.();
+        }
+
+        // Reset button
+        setTimeout(() => {
+          addButton.innerText = "Add to Cart";
+          addButton.disabled = false;
+        }, 2000);
+      })
+      .catch(err => {
+        console.error(err);
+        addButton.innerText = "Error";
+        setTimeout(() => {
+          addButton.innerText = "Add to Cart";
+          addButton.disabled = false;
+        }, 2000);
+      });
     });
   });
 });
+</script>
+
 
 </script>
     
