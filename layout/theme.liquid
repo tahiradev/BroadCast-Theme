@@ -426,7 +426,8 @@
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
-    <!-- Slick Slider JS
+    <!-- Slick Slider JS 
+ -->
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
@@ -454,78 +455,6 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 
- -->
-    <script>
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.product-form').forEach(form => {
-    form.addEventListener('submit', async function(e) {
-      e.preventDefault();
-      
-      const formData = new FormData(form);
-      const submitButton = form.querySelector('[name="add"]');
-      const originalText = submitButton.innerHTML;
-      
-      // Disable button and show loading state
-      submitButton.disabled = true;
-      submitButton.innerHTML = 'Adding...';
-      
-      try {
-        // Get the variant ID from the form
-        const formDataObject = {};
-        formData.forEach((value, key) => {
-          formDataObject[key] = value;
-        });
-        
-        // Ensure we have a variant ID
-        if (!formDataObject.id) {
-          throw new Error('No variant selected');
-        }
-        
-        // Create proper items array for Shopify API
-        const items = [{
-          id: formDataObject.id,
-          quantity: formDataObject.quantity || 1
-          // Add properties if needed: properties: {...}
-        }];
-        
-        // Add item to cart via AJAX
-        const response = await fetch('/cart/add.js', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ items })
-        });
-        
-        const result = await response.json();
-        
-        if (response.ok) {
-          // Update cart count
-          fetch('/cart.js')
-            .then(response => response.json())
-            .then(cart => {
-              document.querySelectorAll('.cart-count-bubble').forEach(el => {
-                el.textContent = cart.item_count;
-              });
-            });
-          
-          // Open cart drawer
-          document.querySelector('cart-drawer').open();
-        } else {
-          console.error('Error adding to cart:', result.description);
-          alert('Error: ' + result.description);
-        }
-      } catch (error) {
-        console.error('Error:', error);
-        alert(error.message || 'An error occurred while adding to cart.');
-      } finally {
-        // Reset button state
-        submitButton.disabled = false;
-        submitButton.innerHTML = originalText;
-      }
-    });
-  });
-});
-      </script>
+
   </body>
 </html>
