@@ -419,41 +419,82 @@ document.addEventListener('DOMContentLoaded', function () {
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".ajax-add-to-cart-form").forEach(form => {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
+    document.querySelectorAll(".ajax-add-to-cart-form").forEach(form => {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-      const variantId = form.querySelector('input[name="id"]').value;
-      const addButton = form.querySelector(".ajax-add-btn");
-      addButton.disabled = true;
-      addButton.innerText = "Adding...";
+        const variantId = form.querySelector('input[name="id"]').value;
+        const addButton = form.querySelector(".ajax-add-btn");
+        addButton.disabled = true;
+        addButton.innerText = "Adding...";
 
-      fetch("/cart/add.js", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          id: parseInt(variantId),
-          quantity: 1
+        fetch("/cart/add.js", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            id: parseInt(variantId),
+            quantity: 1
+          })
         })
-      })
-        .then(res => res.json())
-        .then(data => {
-          console.log("Added to cart:", data);
-          addButton.innerText = "Added!";
-          setTimeout(() => {
-            addButton.innerText = "Add to Cart";
-            addButton.disabled = false;
-          }, 1500);
-          // Optional: trigger cart drawer update here
-        })
-        .catch(err => {
-          console.error("Error adding to cart:", err);
-          addButton.innerText = "Error";
-        });
+          .then(res => res.json())
+          .then(data => {
+            console.log("Added to cart:", data);
+            addButton.innerText = "Added!";
+            
+            // 1️⃣ Fetch the updated cart contents
+            fetch("/cart.js")
+              .then(res => res.json())
+              .then(cart => {
+                console.log("Updated cart:", cart);
+                
+                // 2️⃣ Open the cart drawer (Shopify default or custom)
+                // For Shopify's default drawer:
+                if (typeof Shopify !== "undefined" && Shopify.theme.cartDrawer) {
+                  Shopify.theme.cartDrawer.open();
+                } 
+                // For custom drawers (replace with your drawer's open function)
+                else if (typeof window.toggleCartDrawer === "function") {
+                  window.toggleCartDrawer();
+                }
+                
+                // 3️⃣ Update the cart UI (optional, if you have dynamic cart elements)
+                updateCartUI(cart);
+              })
+              .catch(err => console.error("Error fetching cart:", err));
+            
+            setTimeout(() => {
+              addButton.innerText = product.available ? "Add to Cart" : "Pre-Order";
+              addButton.disabled = false;
+            }, 1500);
+          })
+          .catch(err => {
+            console.error("Error adding to cart:", err);
+            addButton.innerText = "Error";
+            setTimeout(() => {
+              addButton.innerText = product.available ? "Add to Cart" : "Pre-Order";
+              addButton.disabled = false;
+            }, 1500);
+          });
+      });
     });
   });
-});
 
+  // 🔄 Optional: Function to update cart UI (customize based on your theme)
+  function updateCartUI(cart) {
+    // Example: Update cart item count
+    const cartCount = document.querySelector(".cart-count");
+    if (cartCount) cartCount.textContent = cart.item_count;
+    
+    // Example: Update cart drawer contents (if you have a dynamic cart-drawer)
+    const cartDrawer = document.querySelector("#cart-drawer");
+    if (cartDrawer) {
+      // Replace with your logic to render cart items
+      cartDrawer.innerHTML = `<h3>Cart (${cart.item_count})</h3>`;
+      cart.items.forEach(item => {
+        cartDrawer.innerHTML += `<div>${item.title} - ${item.price}</div>`;
+      });
+    }
+  }
 </script>
     
   </body>
