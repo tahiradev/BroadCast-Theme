@@ -37,10 +37,18 @@
           <a href="{{ product.url }}">
             <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
           <!-- Quick ADD--->
-            <form method="post" action="/cart/add" class="quick-add-form">
-              <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-              <button type="submit" class="quick-add-btn">Quick Add</button>
-            </form>
+      <form class="ajax-add-to-cart-form">
+  <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+  <button type="submit" class="ajax-add-btn" {% unless product.available %}disabled{% endunless %}>
+    {% if product.available %}
+      Add to Cart
+    {% else %}
+      Sold Out
+    {% endif %}
+  </button>
+</form>
+
+
             <p>{{ product.title }}</p>
             <p>{{ product.price | money }}</p>
 
