@@ -490,11 +490,12 @@
                         </div>
                       </div>
                     {% endif %}
-<!-- Static Block -->
-<div class="styling-help" style="margin-top: 30px; border-top: 1px solid #e1e1e1; padding-top: 20px;">
-  <p><strong>💬 Need styling help?</strong></p>
-  <p>Book an appointment with our virtual stylists! <a href="/pages/contact">Chat now</a></p>
-</div>
+                 {%- when 'Contact' -%}
+                        <!-- Static Block --> 
+                        <div class="styling-help" style="margin-top: 30px; border-top: 1px solid #e1e1e1; padding-top: 20px;">
+                          <p><strong>💬 Need styling help?</strong></p>
+                          <p>Book an appointment with our virtual stylists! <a href="/pages/contact">Chat now</a></p>
+                        </div>
 
 
 
