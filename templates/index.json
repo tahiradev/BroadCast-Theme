@@ -486,6 +486,41 @@
       "settings": {
         "first_text": "First Text of Cart Button"
       }
+    },
+    "custom_product_faq_bUgTbU": {
+      "type": "Custom-product-FAQ",
+      "blocks": {
+        "faq_item_N3UCnJ": {
+          "type": "faq_item",
+          "settings": {
+            "category": "CARE INSTRUCTIONS",
+            "question": "",
+            "answer": ""
+          }
+        },
+        "faq_item_kFhENL": {
+          "type": "faq_item",
+          "settings": {
+            "category": "Shipping & Return",
+            "question": "",
+            "answer": ""
+          }
+        },
+        "faq_item_pjMB76": {
+          "type": "faq_item",
+          "settings": {
+            "category": "Sourcing & Materials",
+            "question": "",
+            "answer": ""
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_N3UCnJ",
+        "faq_item_kFhENL",
+        "faq_item_pjMB76"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -503,6 +538,7 @@
     "follow_us_gallery_kgBt6G",
     "icons_multicolumn_UY7CDc",
     "timeline_sec_JgfqKh",
-    "cart_button_wrnFBK"
+    "cart_button_wrnFBK",
+    "custom_product_faq_bUgTbU"
   ]
 }
