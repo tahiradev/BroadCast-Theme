@@ -719,7 +719,10 @@ Add FAQ Section
 
   {% for category in categories %}
     <div class="faq-category">
-     
+      <button class="faq-category-toggle" type="button">
+        {{ category }}
+        <span class="icon">+</span>
+      </button>
       <div class="faq-items">
         <div class="faq-grid">
           {% for block in section.blocks %}
