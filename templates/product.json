@@ -120,10 +120,18 @@
             "category": "CARE INSTURCTIONS",
             "answer": "<p>Instructions About Care</p>"
           }
+        },
+        "faq_item_kFbWj6": {
+          "type": "faq_item",
+          "settings": {
+            "category": "Shipping & Returns",
+            "answer": "<p>Shipping Details</p>"
+          }
         }
       },
       "block_order": [
-        "faq_item_MkLRbW"
+        "faq_item_MkLRbW",
+        "faq_item_kFbWj6"
       ],
       "settings": {}
     }
