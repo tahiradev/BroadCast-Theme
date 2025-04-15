@@ -11,34 +11,24 @@
       </button>
       <div class="faq-items">
         <div class="faq-grid">
-         {% for block in section.blocks %}
-  {% if block.settings.category == category %}
-    <div class="faq-item">
-  {% for i in (1..3) %}
-  {% assign heading_key = "faq_list_heading_" | append: i %}
-  {% assign text_key = "faq_list_text_" | append: i %}
-  {% assign heading = block.settings[heading_key] %}
-  {% assign text = block.settings[text_key] %}
-  
-  {% if heading != blank or text != blank %}
-    <div class="Faq-list-item">
-      {% if heading != blank %}
-        <h3>{{ heading }}</h3>
-      {% endif %}
-      {% if text != blank %}
-        {{ text }}
-      {% endif %}
-    </div>
-  {% endif %}
-{% endfor %}
-
-      {% if block.settings.answer != blank %}
-        <div class="faq-answer">{{ block.settings.answer }}</div>
-      {% endif %}
-    </div>
-  {% endif %}
-{% endfor %}
-
+          {% for block in section.blocks %}
+            {% if block.settings.category == category %}
+              <div class="faq-item">
+                <div class="Faq-list-item">
+                  <h3>How do I take care of my jewelry?</h3>
+                  <p><em><strong>14K Gold </strong></em></p>
+                  <p>Scrub lightly with a fresh toothbrush and warm water. You can also buff your pieces using the cloth included in your order.</p>
+                  <p> <br>
+                    <em><strong>Sterling Silver </strong></em></p>
+                  <p>Scrub lightly with a fresh toothbrush and warm water. You can also buff your pieces using the cloth included in your order.</p>
+                </div>
+                <div class="Faq-list-item">second-list</div>
+               <div class="Faq-list-item">third-list</div>
+                <div class="Faq-list-item">fourth list</div>
+                <div class="faq-answer">{{ block.settings.answer }}</div>
+              </div>
+            {% endif %}
+          {% endfor %}
         </div>
       </div>
     </div>
@@ -46,10 +36,6 @@
 </div>
 
 {% stylesheet %}
-  .faq-item {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
 .custom-faq {
   padding: 2rem 0;
   max-width: 80vw;
@@ -130,36 +116,6 @@ document.querySelectorAll('.faq-category-toggle').forEach(toggle => {
           "type": "richtext",
           "id": "answer",
           "label": "Answer"
-        },
-         {
-          "type": "text",
-          "id": "faq_list_heading_1",
-          "label": "List Item 1 Heading"
-        },
-        {
-          "type": "richtext",
-          "id": "faq_list_text_1",
-          "label": "List Item 1 Text"
-        },
-        {
-          "type": "text",
-          "id": "faq_list_heading_2",
-          "label": "List Item 2 Heading"
-        },
-        {
-          "type": "richtext",
-          "id": "faq_list_text_2",
-          "label": "List Item 2 Text"
-        },
-        {
-          "type": "text",
-          "id": "faq_list_heading_3",
-          "label": "List Item 3 Heading"
-        },
-        {
-          "type": "richtext",
-          "id": "faq_list_text_3",
-          "label": "List Item 3 Text"
         }
       ]
     }
