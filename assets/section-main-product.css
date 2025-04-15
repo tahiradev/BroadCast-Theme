@@ -16,6 +16,9 @@
  .relevnt_product a,p {
    margin: 0px;
  }
+.product_img img {
+  display: block;
+}
 product-info {
   display: block;
 }
