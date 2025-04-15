@@ -118,13 +118,13 @@
           "type": "faq_item",
           "settings": {
             "category": "CARE INSTURCTIONS",
-            "answer": "<p>Instructions About Care</p>",
+            "answer": "",
             "faq_list_heading_1": "How do I take care of my jewelry?",
             "faq_list_text_1": "",
             "faq_list_heading_2": "",
             "faq_list_text_2": "",
             "faq_list_heading_3": "",
-            "faq_list_text_3": ""
+            "faq_list_text_3": "<p>&lt;p&gt; Can we add HTML here?&lt;/p&gt;</p>"
           }
         },
         "faq_item_kFbWj6": {
