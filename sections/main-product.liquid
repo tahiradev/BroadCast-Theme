@@ -464,28 +464,33 @@
              {%- when 'product' -%}
 
                   
-                        <!-- Complete the Look Block -->
-                        {% if product.metafields.custom.complete_the_look.value %}
-                          <div class="complete-look">
-                            <p><strong>Complete the look:</strong></p>
-                            {% assign look_product = product.metafields.custom.complete_the_look.value %}
-                            <div class="relevnt_product">
-                              <a href="{{ look_product.url }}">
-                                <div class="product_img">
-                                <img src="{{ look_product.featured_image | img_url: 'small' }}" alt="{{ look_product.title }}">
-                                  </div>
-                              </a>
-                              <div class="product_detail">
-                                <a href="{{ look_product.url }}">
-                                  <p>{{ look_product.title }}</p>
-                                </a>
-                                <p>{{ look_product.price | money }}</p>
+                       {% if product.metafields.custom.complete_the_look.value %}
+  {% assign look_product = product.metafields.custom.complete_the_look.value %}
+  <div class="complete-look-card">
+    <a href="{{ look_product.url }}" class="look-image">
+      <img src="{{ look_product.featured_image | img_url: '200x' }}" alt="{{ look_product.title }}">
+    </a>
+    <div class="look-content">
+      <a href="{{ look_product.url }}">
+        <p class="look-title">{{ look_product.title }}</p>
+      </a>
+      <p class="look-price">{{ look_product.price | money }}</p>
+      <form method="post" action="/cart/add" class="ajax-add-to-cart-form">
+        <input type="hidden" name="id" value="{{ look_product.selected_or_first_available_variant.id }}">
+        <button type="submit" class="look-cart-button" {% unless look_product.available %}disabled{% endunless %}>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 6h15l-1.5 9h-13z"></path>
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M10 13h4"></path>
+            <path d="M12 11v4"></path>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+{% endif %}
 
-                              
-                              </div>
-                            </div>
-                          </div>
-                        {% endif %}
               
                  {%- when 'Contact' -%}
               
