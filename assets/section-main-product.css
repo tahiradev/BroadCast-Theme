@@ -11,6 +11,7 @@
   .relevnt_product {
     display: flex;
     align-items: center;
+    background-color: #f5f2ec;
   }
  .relevnt_product a,p {
    margin: 0px;
@@ -25,6 +26,9 @@
 .product_detail a {
   color:black;
   text-decoration: none;
+}
+.relevnt_product {
+  background-color: 
 }
 /* End Relevant Product Styling */
 product-info {
