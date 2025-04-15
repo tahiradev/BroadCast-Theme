@@ -118,21 +118,78 @@
           "type": "faq_item",
           "settings": {
             "category": "CARE INSTURCTIONS",
-            "answer": ""
+            "first_faq_heading": "FIrs heading",
+            "first_caption": "",
+            "first_desc": "",
+            "first2_caption": "",
+            "first2_desc": "",
+            "sec_faq_heading": "",
+            "scnd_caption": "",
+            "scnd_desc": "",
+            "scnd2_caption": "",
+            "scnd2_desc": "",
+            "third_faq_heading": "",
+            "thrd_caption": "",
+            "thrd_desc": "",
+            "thrd2_caption": "",
+            "thrd2_desc": "",
+            "forth_faq_heading": "",
+            "forth_caption": "",
+            "forth_desc": "",
+            "forth2_caption": "",
+            "forth2_desc": ""
           }
         },
         "faq_item_kFbWj6": {
           "type": "faq_item",
           "settings": {
             "category": "Shipping & Returns",
-            "answer": "<p>Shipping Details</p>"
+            "first_faq_heading": "",
+            "first_caption": "",
+            "first_desc": "",
+            "first2_caption": "",
+            "first2_desc": "",
+            "sec_faq_heading": "",
+            "scnd_caption": "",
+            "scnd_desc": "",
+            "scnd2_caption": "",
+            "scnd2_desc": "",
+            "third_faq_heading": "",
+            "thrd_caption": "",
+            "thrd_desc": "",
+            "thrd2_caption": "",
+            "thrd2_desc": "",
+            "forth_faq_heading": "",
+            "forth_caption": "",
+            "forth_desc": "",
+            "forth2_caption": "",
+            "forth2_desc": ""
           }
         },
         "faq_item_RtYiff": {
           "type": "faq_item",
           "settings": {
             "category": "Sourcing &  Materials",
-            "answer": "<p>Materials Details</p>"
+            "first_faq_heading": "",
+            "first_caption": "",
+            "first_desc": "",
+            "first2_caption": "",
+            "first2_desc": "",
+            "sec_faq_heading": "",
+            "scnd_caption": "",
+            "scnd_desc": "",
+            "scnd2_caption": "",
+            "scnd2_desc": "",
+            "third_faq_heading": "",
+            "thrd_caption": "",
+            "thrd_desc": "",
+            "thrd2_caption": "",
+            "thrd2_desc": "",
+            "forth_faq_heading": "",
+            "forth_caption": "",
+            "forth_desc": "",
+            "forth2_caption": "",
+            "forth2_desc": ""
           }
         }
       },
