@@ -127,11 +127,19 @@
             "category": "Shipping & Returns",
             "answer": "<p>Shipping Details</p>"
           }
+        },
+        "faq_item_RtYiff": {
+          "type": "faq_item",
+          "settings": {
+            "category": "Sourcing &  Materials",
+            "answer": "<p>Materials Details</p>"
+          }
         }
       },
       "block_order": [
         "faq_item_MkLRbW",
-        "faq_item_kFbWj6"
+        "faq_item_kFbWj6",
+        "faq_item_RtYiff"
       ],
       "settings": {}
     }
