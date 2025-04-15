@@ -711,34 +711,6 @@
     </div>
 
     {% render 'product-media-modal', variant_images: variant_images %}
-Add FAQ Section 
-
-
-<div class="custom-faq">
-  {% assign categories = section.blocks | map: 'settings' | map: 'category' | uniq %}
-
-  {% for category in categories %}
-    <div class="faq-category">
-      <button class="faq-category-toggle" type="button">
-        {{ category }}
-        <span class="icon">+</span>
-      </button>
-      <div class="faq-items">
-        <div class="faq-grid">
-          {% for block in section.blocks %}
-            {% if block.settings.category == category %}
-              <div class="faq-item">
-
-                <div class="faq-answer">{{ block.settings.answer }}</div>
-              </div>
-            {% endif %}
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-  {% endfor %}
-</div>
-
 
     
     {% assign popups = section.blocks | where: 'type', 'popup' %}
@@ -792,25 +764,7 @@ Add FAQ Section
     </script>
   </div>
 </product-info>
-<script>
-document.querySelectorAll('.faq-category-toggle').forEach(toggle => {
-  toggle.addEventListener('click', function () {
-    const items = this.nextElementSibling;
-    const isOpen = items.style.display === 'block';
 
-    // Close all
-    document.querySelectorAll('.faq-items').forEach(i => i.style.display = 'none');
-    document.querySelectorAll('.faq-category-toggle .icon').forEach(i => i.textContent = '+');
-
-    // Open this one
-    if (!isOpen) {
-      items.style.display = 'block';
-      this.querySelector('.icon').textContent = '–';
-    }
-  });
-});
-  
-</script>
 {% schema %}
 {
   "name": "t:sections.main-product.name",
