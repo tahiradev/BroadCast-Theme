@@ -113,6 +113,18 @@
     },
     "custom_product_faq_gKaTT4": {
       "type": "Custom-product-FAQ",
+      "blocks": {
+        "faq_item_MkLRbW": {
+          "type": "faq_item",
+          "settings": {
+            "category": "CARE INSTURCTIONS",
+            "answer": "<p>Instructions About Care</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_MkLRbW"
+      ],
       "settings": {}
     }
   },
