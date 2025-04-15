@@ -461,36 +461,40 @@
                   assign share_url = product.selected_variant.url | default: product.url | prepend: request.origin
                   render 'share-button', block: block, share_link: share_url
                 %}
-                         {%- when 'product' -%}
-                    <!-- Complete the Look Block -->
-                    {% if product.metafields.custom.complete_the_look.value %}
-                      <div class="complete-look">
-                        <p><strong>Complete the look:</strong></p>
-                        {% assign look_product = product.metafields.custom.complete_the_look.value %}
-                        <div>
-                          <a href="{{ look_product.url }}">
-                            <img src="{{ look_product.featured_image | img_url: 'small' }}" alt="{{ look_product.title }}">
-                          </a>
-                          <div>
-                            <a href="{{ look_product.url }}">
-                              <p>{{ look_product.title }}</p>
-                            </a>
-                            <p>{{ look_product.price | money }}</p>
-                                <form class="ajax-add-to-cart-form">
-                                  <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-                                  <button type="submit" class="ajax-add-btn" {% unless product.available %}disabled{% endunless %}>
-                                    {% if product.available %}
-                                      Add to Cart
-                                    {% else %}
-                                      Pre-Order
-                                    {% endif %}
-                                  </button>
-                                </form>
+             {%- when 'product' -%}
+
+                  
+                        <!-- Complete the Look Block -->
+                        {% if product.metafields.custom.complete_the_look.value %}
+                          <div class="complete-look">
+                            <p><strong>Complete the look:</strong></p>
+                            {% assign look_product = product.metafields.custom.complete_the_look.value %}
+                            <div>
+                              <a href="{{ look_product.url }}">
+                                <img src="{{ look_product.featured_image | img_url: 'small' }}" alt="{{ look_product.title }}">
+                              </a>
+                              <div>
+                                <a href="{{ look_product.url }}">
+                                  <p>{{ look_product.title }}</p>
+                                </a>
+                                <p>{{ look_product.price | money }}</p>
+                                    <form class="ajax-add-to-cart-form">
+                                      <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                                      <button type="submit" class="ajax-add-btn" {% unless product.available %}disabled{% endunless %}>
+                                        {% if product.available %}
+                                          Add to Cart
+                                        {% else %}
+                                          Pre-Order
+                                        {% endif %}
+                                      </button>
+                                    </form>
+                              </div>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                    {% endif %}
+                        {% endif %}
+              
                  {%- when 'Contact' -%}
+              
                         <!-- Static Block --> 
                         <div class="styling-help">
                           <p><strong>💬 Need styling help?</strong></p>
