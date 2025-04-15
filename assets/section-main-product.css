@@ -18,6 +18,11 @@
 .product_img img {
   display: block;
 }
+.product_detail {
+    padding-left: 24px;
+    padding-right: 80px;
+}
+/* End Relevant Product Styling */
 product-info {
   display: block;
 }
