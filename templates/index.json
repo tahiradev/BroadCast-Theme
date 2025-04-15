@@ -481,12 +481,6 @@
         "cption1": ""
       }
     },
-    "cart_button_wrnFBK": {
-      "type": "cart-button",
-      "settings": {
-        "first_text": "First Text of Cart Button"
-      }
-    },
     "custom_product_faq_bUgTbU": {
       "type": "Custom-product-FAQ",
       "blocks": {
@@ -538,7 +532,6 @@
     "follow_us_gallery_kgBt6G",
     "icons_multicolumn_UY7CDc",
     "timeline_sec_JgfqKh",
-    "cart_button_wrnFBK",
     "custom_product_faq_bUgTbU"
   ]
 }
