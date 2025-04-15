@@ -1,7 +1,18 @@
 
 
 /* Relevant Product Styling */
-
+ .styling-help {
+    background-color: #f5f2ec;
+    padding: 20px;
+  }
+  .styling-help a {
+    color: black;
+  }
+  .relevnt_product {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
 product-info {
   display: block;
 }
