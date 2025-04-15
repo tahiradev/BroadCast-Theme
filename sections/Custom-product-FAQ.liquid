@@ -14,10 +14,10 @@
           {% for block in section.blocks %}
             {% if block.settings.category == category %}
               <div class="faq-item">
-                <div class="Faq-list-item"></div>
-                <div class="Faq-list-item"></div>
-               <div class="Faq-list-item"></div>
-                <div class="Faq-list-item"></div>
+                <div class="Faq-list-item">First List</div>
+                <div class="Faq-list-item">second-list</div>
+               <div class="Faq-list-item">third-list</div>
+                <div class="Faq-list-item">fourth list</div>
                 <div class="faq-answer">{{ block.settings.answer }}</div>
               </div>
             {% endif %}
