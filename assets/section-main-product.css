@@ -1,4 +1,44 @@
 /* Product FAQ */
+
+.custom-faq {
+  padding: 2rem 0;
+  border-top: 1px solid #e1e1e1;
+}
+.faq-category {
+  border-bottom: 1px solid #e1e1e1;
+  margin-bottom: 2rem;
+}
+.faq-category-toggle {
+  width: 100%;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: left;
+  padding: 1rem 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq-items {
+  display: none;
+  padding-bottom: 1.5rem;
+}
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.faq-item .faq-question {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.faq-answer {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
 /* End Product FAQ */
 
 /* Relevant Product Styling */
