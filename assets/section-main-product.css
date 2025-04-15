@@ -18,6 +18,7 @@
  }
 .product_img img {
   display: block;
+  width: 120px;
 }
 .product_detail {
     padding-left: 24px;
