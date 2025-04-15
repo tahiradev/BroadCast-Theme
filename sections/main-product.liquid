@@ -728,6 +728,7 @@ Add FAQ Section
           {% for block in section.blocks %}
             {% if block.settings.category == category %}
               <div class="faq-item">
+
                 <div class="faq-answer">{{ block.settings.answer }}</div>
               </div>
             {% endif %}
@@ -795,13 +796,6 @@ Add FAQ Section
 {% schema %}
 {
   "name": "t:sections.main-product.name",
-  "settings": [
-    {
-          "type": "text",
-          "id": "category",
-          "label": "Category Title"
-        }
-  ],
   "tag": "section",
   "class": "section",
   "blocks": [
