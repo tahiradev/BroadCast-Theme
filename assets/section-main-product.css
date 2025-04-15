@@ -11,7 +11,6 @@
   .relevnt_product {
     display: flex;
     align-items: center;
-    gap: 2rem;
   }
  .relevnt_product a,p {
    margin: 0px;
