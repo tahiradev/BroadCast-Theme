@@ -118,39 +118,21 @@
           "type": "faq_item",
           "settings": {
             "category": "CARE INSTURCTIONS",
-            "answer": "",
-            "faq_list_heading_1": "How do I take care of my jewelry?",
-            "faq_list_text_1": "",
-            "faq_list_heading_2": "",
-            "faq_list_text_2": "",
-            "faq_list_heading_3": "",
-            "faq_list_text_3": "<p>&lt;p&gt; Can we add HTML here?&lt;/p&gt;</p>"
+            "answer": ""
           }
         },
         "faq_item_kFbWj6": {
           "type": "faq_item",
           "settings": {
             "category": "Shipping & Returns",
-            "answer": "<p>Shipping Details</p>",
-            "faq_list_heading_1": "",
-            "faq_list_text_1": "",
-            "faq_list_heading_2": "",
-            "faq_list_text_2": "",
-            "faq_list_heading_3": "",
-            "faq_list_text_3": ""
+            "answer": "<p>Shipping Details</p>"
           }
         },
         "faq_item_RtYiff": {
           "type": "faq_item",
           "settings": {
             "category": "Sourcing &  Materials",
-            "answer": "<p>Materials Details</p>",
-            "faq_list_heading_1": "",
-            "faq_list_text_1": "",
-            "faq_list_heading_2": "",
-            "faq_list_text_2": "",
-            "faq_list_heading_3": "",
-            "faq_list_text_3": ""
+            "answer": "<p>Materials Details</p>"
           }
         }
       },
