@@ -1,3 +1,30 @@
+
+
+<div class="custom-faq">
+  {% assign categories = section.blocks | map: 'settings' | map: 'category' | uniq %}
+
+  {% for category in categories %}
+    <div class="faq-category">
+      <button class="faq-category-toggle" type="button">
+        {{ category }}
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-items">
+        <div class="faq-grid">
+          {% for block in section.blocks %}
+            {% if block.settings.category == category %}
+              <div class="faq-item">
+
+                <div class="faq-answer">{{ block.settings.answer }}</div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
 {% stylesheet %}
 .custom-faq {
   padding: 2rem 0;
@@ -41,30 +68,6 @@
 }
 {% endstylesheet %}
 
-<div class="custom-faq">
-  {% assign categories = section.blocks | map: 'settings' | map: 'category' | uniq %}
-
-  {% for category in categories %}
-    <div class="faq-category">
-      <button class="faq-category-toggle" type="button">
-        {{ category }}
-        <span class="icon">+</span>
-      </button>
-      <div class="faq-items">
-        <div class="faq-grid">
-          {% for block in section.blocks %}
-            {% if block.settings.category == category %}
-              <div class="faq-item">
-
-                <div class="faq-answer">{{ block.settings.answer }}</div>
-              </div>
-            {% endif %}
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-  {% endfor %}
-</div>
 
 {% javascript %}
 document.querySelectorAll('.faq-category-toggle').forEach(toggle => {
