@@ -504,12 +504,12 @@
         "shipping_hAqFAW": {
           "type": "SHIPPING",
           "settings": {
-            "heading": "",
-            "description": "",
-            "heading2": "",
-            "description2": "",
-            "heading3": "",
-            "description3": ""
+            "heading": "International Shipping",
+            "description": "We are happy to announce we officially ship internationally! All orders are dispatched from our US warehouse within 2 - 3 business days.",
+            "heading2": "Order tracking",
+            "description2": "Tracking numbers are automatically sent as soon as your order is packed. Please check your junk folder if you do not receive one 72hrs after placing your order.",
+            "heading3": "Get in touch",
+            "description3": "If you have any questions about your order, please contact us. Our customer service is available Monday through Friday from 8am until 5pm est."
           }
         },
         "sourcing_E8LJ8q": {
