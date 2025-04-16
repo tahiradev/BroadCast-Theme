@@ -498,11 +498,19 @@
             "heading": "First Icon heading",
             "description": ""
           }
+        },
+        "column_image_text_gfHAPb": {
+          "type": "column_image_text",
+          "settings": {
+            "image": "shopify://shop_images/wer-erng.webp",
+            "text": "Image Details"
+          }
         }
       },
       "block_order": [
         "faq_item_qjh8Eh",
-        "column_info_HDpYLq"
+        "column_info_HDpYLq",
+        "column_image_text_gfHAPb"
       ],
       "name": "New FAQ Sections",
       "settings": {}
