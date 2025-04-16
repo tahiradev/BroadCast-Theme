@@ -9,7 +9,7 @@
     {% when 'CARE' %}
       <div class="care-block">
         <h1>{{ block.settings.category }}</h1>
-
+        <div class="care-Inner-content">
         <h4>{{ block.settings.first_faq_heading }}</h4>
         <p>{{ block.settings.first_caption }}</p>
         <p>{{ block.settings.first_desc }}</p>
@@ -24,6 +24,7 @@
 
         <h4>{{ block.settings.forth_faq_heading }}</h4>
         <p>{{ block.settings.forth_desc }}</p>
+           </div>
       </div>
 
     {% when 'SHIPPING' %}
