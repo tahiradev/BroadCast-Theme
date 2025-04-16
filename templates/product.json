@@ -117,9 +117,9 @@
         "care_MMftHV": {
           "type": "CARE",
           "settings": {
-            "category": "",
-            "first_faq_heading": "",
-            "first_caption": "",
+            "category": "Care Instructions",
+            "first_faq_heading": "How do I take care of my jewelry?",
+            "first_caption": "14K Gold",
             "first_desc": "",
             "first2_caption": "",
             "first2_desc": "",
