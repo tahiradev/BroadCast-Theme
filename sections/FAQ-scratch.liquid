@@ -30,7 +30,7 @@
     {% when 'SHIPPING' %}
       <div class="shipping-block">
         <h1>{{ block.settings.shipping_category }}</h1>
-
+<div class="shipping-inner-content">
         <div class="shipping-section">
           <div class="svg">{{ block.settings.svg_code }}</div>
           <h4>{{ block.settings.heading }}</h4>
@@ -49,7 +49,7 @@
           <p>{{ block.settings.description3 }}</p>
         </div>
       </div>
-
+      </div>
     {% when 'SOURCING' %}
       <div class="sourcing-block">
         <h1>{{ block.settings.src_category }}</h1>
