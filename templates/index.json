@@ -502,7 +502,8 @@
         "image_block_n6qzTf": {
           "type": "image_block",
           "settings": {
-            "text": ""
+            "image": "shopify://shop_images/wear-earing.webp",
+            "text": "image"
           }
         }
       },
