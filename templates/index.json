@@ -481,39 +481,58 @@
         "cption1": ""
       }
     },
-    "scnd_custom_faq_EXtThg": {
-      "type": "scnd-custom-FAQ",
+    "faq_scratch_3XzVF7": {
+      "type": "FAQ-scratch",
       "blocks": {
-        "faq_item_ACFH7b": {
-          "type": "faq_item",
+        "faq_kn8M4G": {
+          "type": "FAQ",
           "settings": {
-            "question": "First Question",
-            "answer": "Answser"
+            "category": "",
+            "first_faq_heading": "",
+            "first_caption": "",
+            "first_desc": "",
+            "first2_caption": "",
+            "first2_desc": "",
+            "sec_faq_heading": "",
+            "scnd_caption": "",
+            "scnd_desc": "",
+            "scnd2_caption": "",
+            "scnd2_desc": "",
+            "third_faq_heading": "",
+            "thrd_caption": "",
+            "thrd_desc": "",
+            "thrd2_caption": "",
+            "thrd2_desc": "",
+            "forth_faq_heading": "",
+            "forth_caption": "",
+            "forth_desc": "",
+            "forth2_caption": "",
+            "forth2_desc": ""
           }
         },
-        "info_7aTrE6": {
+        "info_pHnq3g": {
           "type": "info",
           "settings": {
-            "icon": "shopify://shop_images/flag.png",
-            "heading": "Pakistan",
-            "description": "It's a country"
+            "heading": "",
+            "description": ""
           }
         },
-        "image_block_n6qzTf": {
+        "image_block_FYmPRD": {
           "type": "image_block",
           "settings": {
-            "image": "shopify://shop_images/wear-earing.webp",
-            "text": "image"
+            "text": ""
           }
         }
       },
       "block_order": [
-        "faq_item_ACFH7b",
-        "info_7aTrE6",
-        "image_block_n6qzTf"
+        "faq_kn8M4G",
+        "info_pHnq3g",
+        "image_block_FYmPRD"
       ],
-      "name": "FAQ Custom List",
-      "settings": {}
+      "name": "FAQ from Scratch",
+      "settings": {
+        "faq_text": ""
+      }
     }
   },
   "order": [
@@ -531,6 +550,6 @@
     "follow_us_gallery_kgBt6G",
     "icons_multicolumn_UY7CDc",
     "timeline_sec_JgfqKh",
-    "scnd_custom_faq_EXtThg"
+    "faq_scratch_3XzVF7"
   ]
 }
