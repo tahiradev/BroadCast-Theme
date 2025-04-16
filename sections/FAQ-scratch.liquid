@@ -53,7 +53,7 @@
     {% when 'SOURCING' %}
       <div class="sourcing-block">
         <h1>{{ block.settings.src_category }}</h1>
-
+<div class="src-inner-content">
         <div class="source">
           <img src="{{ block.settings.src_image | img_url: 'medium' }}" alt="Image 1">
           <h4>{{ block.settings.src_heading }}</h4>
@@ -71,6 +71,7 @@
           <h4>{{ block.settings.src_heading3 }}</h4>
           <p>{{ block.settings.src_decript3 }}</p>
         </div>
+  </div>
       </div>
 
   {% endcase %}
