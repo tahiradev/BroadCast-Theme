@@ -1,6 +1,197 @@
+<!-- sections/custom-faq.liquid -->
+<div class="faq-wrapper">
+
+  <!-- First FAQ Section -->
+  <div class="faq-section">
+    <h2>General Questions</h2>
+    <div class="faq-accordion">
+      {% for block in section.blocks %}
+        {% if block.type == 'faq_list' %}
+        <div class="faq-item">
+          <button class="faq-question">{{ block.settings.question }}</button>
+          <div class="faq-answer">{{ block.settings.answer }}</div>
+        </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Second FAQ Section -->
+  <div class="faq-icons-section">
+    <h2>Why Choose Us?</h2>
+    <div class="faq-icons-grid">
+      {% for block in section.blocks %}
+        {% if block.type == 'faq_icon' %}
+        <div class="faq-icon-item">
+          <div class="icon">{{ block.settings.icon }}</div>
+          <h3>{{ block.settings.title }}</h3>
+          <p>{{ block.settings.description }}</p>
+        </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Third FAQ Section -->
+  <div class="faq-expandable-section">
+    <h2>More Information</h2>
+    <div class="faq-expandable-grid">
+      {% for block in section.blocks %}
+        {% if block.type == 'faq_expand' %}
+        <div class="expandable-item">
+          <img src="{{ block.settings.image | img_url: 'medium' }}" alt="FAQ image">
+          <div class="faq-title-row">
+            <h3>{{ block.settings.title }}</h3>
+            <button class="expand-toggle">+</button>
+          </div>
+          <div class="expand-content">{{ block.settings.details }}</div>
+        </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+</div>
+
+<style>
+.faq-wrapper {
+  padding: 40px;
+}
+.faq-accordion .faq-item {
+  margin-bottom: 10px;
+}
+.faq-question {
+  background: #f3f3f3;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: left;
+}
+.faq-answer {
+  display: none;
+  padding: 10px;
+  background: #fff;
+  border-left: 3px solid #000;
+}
+
+/* Second Section */
+.faq-icons-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.faq-icon-item {
+  flex: 1 1 calc(33.333% - 20px);
+  text-align: center;
+}
+.faq-icon-item .icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+/* Third Section */
+.faq-expandable-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.expandable-item {
+  flex: 1 1 calc(33.333% - 20px);
+  position: relative;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+.expandable-item img {
+  width: 100%;
+  height: auto;
+}
+.faq-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.expand-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+.expand-content {
+  display: none;
+  padding-top: 10px;
+}
+.expand-toggle.open::after {
+  content: '-';
+}
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Accordion for first FAQ
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const answer = btn.nextElementSibling;
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+
+    // Expandable FAQs in third section
+    document.querySelectorAll('.expandable-item').forEach(item => {
+      const toggle = item.querySelector('.expand-toggle');
+      const content = item.querySelector('.expand-content');
+
+      toggle.addEventListener('click', () => {
+        if (content.style.display === 'block') {
+          content.style.display = 'none';
+          toggle.textContent = '+';
+        } else {
+          content.style.display = 'block';
+          toggle.textContent = '-';
+        }
+      });
+    });
+  });
+</script>
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "second Custom FAQ",
+  "blocks": [
+    {
+      "type": "faq_list",
+      "name": "FAQ List Item",
+      "settings": [
+        { "type": "text", "id": "question", "label": "Question" },
+        { "type": "textarea", "id": "answer", "label": "Answer" }
+      ]
+    },
+    {
+      "type": "faq_icon",
+      "name": "Icon Column",
+      "settings": [
+        { "type": "text", "id": "icon", "label": "Icon (e.g., emoji or HTML)" },
+        { "type": "text", "id": "title", "label": "Heading" },
+        { "type": "textarea", "id": "description", "label": "Description" }
+      ]
+    },
+    {
+      "type": "faq_expand",
+      "name": "Expandable Image Column",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "title", "label": "Heading" },
+        { "type": "textarea", "id": "details", "label": "Expandable Content" }
+      ]
+    }
+  ],
+  "max_blocks": 30,
+  "presets": [
+    {
+      "name": "secon Custom FAQ Layout"
+    }
+  ]
+}
 {% endschema %}
