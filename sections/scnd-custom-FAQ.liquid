@@ -1,6 +1,6 @@
 {% schema %}
 {
-  "name": "New FAQ Sections",
+  "name": "FAQ Custom List",
   "tag": "section",
   "class": "custom-faq-wrapper",
   "settings": [],
@@ -22,8 +22,8 @@
       ]
     },
     {
-      "type": "column_info",
-      "name": "3 Column Info Block",
+      "type": "info",
+      "name": "column info",
       "settings": [
         {
           "type": "image_picker",
@@ -43,8 +43,8 @@
       ]
     },
     {
-      "type": "column_image_text",
-      "name": "Image with Text Column",
+      "type": "image_block",
+      "name": "Image + Text Column",
       "settings": [
         {
           "type": "image_picker",
@@ -61,7 +61,7 @@
   ],
   "presets": [
     {
-      "name": "New FAQ Sections",
+      "name": "FAQ Custom List",
       "category": "Custom"
     }
   ]
@@ -69,7 +69,8 @@
 {% endschema %}
 
 <div class="faq-sections">
-  <!-- FAQ TOGGLE LIST -->
+
+  <!-- First FAQ List -->
   <div class="faq-accordion">
     <h2>FAQs</h2>
     {% for block in section.blocks %}
@@ -87,46 +88,59 @@
     {% endfor %}
   </div>
 
-  <!-- 3-COLUMN WITH ICON/HEADING/DESC -->
+  <!-- Second Section: 3 Column Info -->
   <div class="faq-columns">
     <h2>Shipping & Returns</h2>
     <div class="columns-wrapper">
       {% for block in section.blocks %}
-        {% if block.type == 'column_info' %}
-          <div class="faq-col">
-            {% if block.settings.icon %}
-              <img src="{{ block.settings.icon | image_url: width: 60 }}" alt="icon" class="faq-icon" />
-            {% endif %}
-            <h3>{{ block.settings.heading }}</h3>
-            <p>{{ block.settings.description }}</p>
+        {% if block.type == 'info' %}
+          <div class="faq-toggle">
+            <button class="faq-question">
+              <div class="question-text">
+                {% if block.settings.icon %}
+                  <img src="{{ block.settings.icon | image_url: width: 40 }}" alt="icon" class="faq-icon" />
+                {% endif %}
+                {{ block.settings.heading }}
+              </div>
+              <span class="toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>{{ block.settings.description }}</p>
+            </div>
           </div>
         {% endif %}
       {% endfor %}
     </div>
   </div>
 
-  <!-- IMAGE + TEXT COLUMNS -->
+  <!-- Third Section: 3 Column Image + Text -->
   <div class="faq-columns-image-text">
     <h2>Sourcing & Materials</h2>
     <div class="columns-wrapper">
       {% for block in section.blocks %}
-        {% if block.type == 'column_image_text' %}
-          <div class="faq-col">
-            {% if block.settings.image %}
-              <img src="{{ block.settings.image | image_url: width: 300 }}" alt="faq image" class="faq-image" />
-            {% endif %}
-            <p>{{ block.settings.text }}</p>
+        {% if block.type == 'image_block' %}
+          <div class="faq-toggle">
+            <button class="faq-question">
+              <div class="question-text">
+                {% if block.settings.image %}
+                  <img src="{{ block.settings.image | image_url: width: 80 }}" alt="faq image" class="faq-image" />
+                {% endif %}
+                <span>View Details</span>
+              </div>
+              <span class="toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>{{ block.settings.text }}</p>
+            </div>
           </div>
         {% endif %}
       {% endfor %}
     </div>
   </div>
+
 </div>
 
 <style>
-.faq-accordion {
-  margin-bottom: 40px;
-}
 .faq-question {
   display: flex;
   justify-content: space-between;
@@ -140,10 +154,6 @@
   width: 100%;
   text-align: left;
 }
-.toggle-icon {
-  font-size: 1.5rem;
-  transition: transform 0.3s ease;
-}
 .faq-answer {
   display: none;
   padding: 10px 0;
@@ -151,11 +161,13 @@
 .faq-toggle.active .faq-answer {
   display: block;
 }
+.toggle-icon {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
 .faq-toggle.active .toggle-icon {
   transform: rotate(180deg);
 }
-
-/* 3 Column Section */
 .columns-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -166,17 +178,20 @@
   text-align: center;
 }
 .faq-icon {
-  width: 50px;
-  margin-bottom: 10px;
+  width: 40px;
+  margin-right: 10px;
+  vertical-align: middle;
 }
 .faq-image {
-  width: 100%;
+  width: 80px;
   border-radius: 8px;
-  margin-bottom: 10px;
+  margin-right: 10px;
+  vertical-align: middle;
 }
-.faq-columns,
-.faq-columns-image-text {
-  margin-top: 40px;
+.question-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 @media(max-width: 768px) {
   .columns-wrapper {
@@ -204,7 +219,7 @@ document.addEventListener("DOMContentLoaded", function () {
         t.querySelector('.faq-answer').style.display = 'none';
       });
 
-      // Open this one
+      // Open current
       if (!isOpen) {
         toggle.classList.add('active');
         icon.textContent = '–';
