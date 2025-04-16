@@ -2,14 +2,80 @@
 <div class="FAQ-main-container">
   <div class="inner-container">
       <div class="FAQ-items">
-        {% for block in section.blocks %}
-           {% if block.settings.category == category %}
-             jdsklajlsdk
-             {% endif %}
-           {% if block.settings.category == shipping_category %}
-             Shippping Category
-             {% endif %}
-        {% endfor %}
+      {% for block in section.blocks %}
+  
+  {% case block.type %}
+  
+    {% when 'CARE' %}
+      <div class="care-block">
+        <h3>{{ block.settings.category }}</h3>
+
+        <h4>{{ block.settings.first_faq_heading }}</h4>
+        <p>{{ block.settings.first_caption }}</p>
+        <p>{{ block.settings.first_desc }}</p>
+        <p>{{ block.settings.first2_caption }}</p>
+        <p>{{ block.settings.first2_desc }}</p>
+
+        <h4>{{ block.settings.sec_faq_heading }}</h4>
+        <p>{{ block.settings.scnd_desc }}</p>
+
+        <h4>{{ block.settings.third_faq_heading }}</h4>
+        <p>{{ block.settings.thrd_desc }}</p>
+
+        <h4>{{ block.settings.forth_faq_heading }}</h4>
+        <p>{{ block.settings.forth_desc }}</p>
+      </div>
+
+    {% when 'SHIPPING' %}
+      <div class="shipping-block">
+        <h3>{{ block.settings.shipping_category }}</h3>
+
+        <div class="shipping-section">
+          <div class="svg">{{ block.settings.svg_code }}</div>
+          <h4>{{ block.settings.heading }}</h4>
+          <p>{{ block.settings.description }}</p>
+        </div>
+
+        <div class="tracking-section">
+          <div class="svg">{{ block.settings.svg_code2 }}</div>
+          <h4>{{ block.settings.heading2 }}</h4>
+          <p>{{ block.settings.description2 }}</p>
+        </div>
+
+        <div class="contact-section">
+          <div class="svg">{{ block.settings.svg_code3 }}</div>
+          <h4>{{ block.settings.heading3 }}</h4>
+          <p>{{ block.settings.description3 }}</p>
+        </div>
+      </div>
+
+    {% when 'SOURCING' %}
+      <div class="sourcing-block">
+        <h3>{{ block.settings.src_category }}</h3>
+
+        <div class="source">
+          <img src="{{ block.settings.src_image | img_url: 'medium' }}" alt="Image 1">
+          <h4>{{ block.settings.src_heading }}</h4>
+          <p>{{ block.settings.src_decript }}</p>
+        </div>
+
+        <div class="source">
+          <img src="{{ block.settings.src_image2 | img_url: 'medium' }}" alt="Image 2">
+          <h4>{{ block.settings.src_heading2 }}</h4>
+          <p>{{ block.settings.src_decript2 }}</p>
+        </div>
+
+        <div class="source">
+          <img src="{{ block.settings.src_image3 | img_url: 'medium' }}" alt="Image 3">
+          <h4>{{ block.settings.src_heading3 }}</h4>
+          <p>{{ block.settings.src_decript3 }}</p>
+        </div>
+      </div>
+
+  {% endcase %}
+
+{% endfor %}
+
       </div>
   </div>
 </div>
