@@ -157,6 +157,30 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
   }
+  /* Toggle Styling */ 
+  
+  /* Initially hide all content sections */
+.care-Inner-content,
+.shipping-inner-content,
+.src-inner-content {
+  display: none;
+}
+
+/* Show content when 'active' class is added */
+.care-Inner-content.active,
+.shipping-inner-content.active,
+.src-inner-content.active {
+  display: grid;
+}
+
+/* Style for the toggle icon */
+.faq-category-toggle .icon {
+  margin-left: 0.5rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
 </style>
 
 <script>
