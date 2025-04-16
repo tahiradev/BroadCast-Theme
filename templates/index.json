@@ -480,6 +480,39 @@
       "settings": {
         "cption1": ""
       }
+    },
+    "scnd_custom_faq_EXtThg": {
+      "type": "scnd-custom-FAQ",
+      "blocks": {
+        "faq_item_ACFH7b": {
+          "type": "faq_item",
+          "settings": {
+            "question": "First Question",
+            "answer": "Answser"
+          }
+        },
+        "info_7aTrE6": {
+          "type": "info",
+          "settings": {
+            "icon": "shopify://shop_images/flag.png",
+            "heading": "Pakistan",
+            "description": "It's a country"
+          }
+        },
+        "image_block_n6qzTf": {
+          "type": "image_block",
+          "settings": {
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_ACFH7b",
+        "info_7aTrE6",
+        "image_block_n6qzTf"
+      ],
+      "name": "FAQ Custom List",
+      "settings": {}
     }
   },
   "order": [
@@ -496,6 +529,7 @@
     "favourit_product_yxmWUK",
     "follow_us_gallery_kgBt6G",
     "icons_multicolumn_UY7CDc",
-    "timeline_sec_JgfqKh"
+    "timeline_sec_JgfqKh",
+    "scnd_custom_faq_EXtThg"
   ]
 }
