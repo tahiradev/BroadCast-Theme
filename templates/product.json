@@ -149,13 +149,16 @@
         "sourcing_zXgzex": {
           "type": "SOURCING",
           "settings": {
-            "src_category": "",
-            "src_heading": "",
-            "src_decript": "",
-            "src_heading2": "",
-            "src_decript2": "",
-            "src_heading3": "",
-            "src_decript3": ""
+            "src_category": "Sourcing & Materials",
+            "src_image": "shopify://shop_images/tre.webp",
+            "src_heading": "Sustainable sourcing",
+            "src_decript": "We are committed to quality products that are manufactured ethically and sustainably. All of our pieces are traceable throughout the supply chain. We strive to ensure our products contribute to the well-being of people and planet, and our efforts put us on track towards a brighter future.",
+            "src_image2": "shopify://shop_images/labor.webp",
+            "src_heading2": "Ethical labor",
+            "src_decript2": "Our founders Christina Smith and Clement Savant founded Broadcast to break the norms of the jewelry industry. Cheap, disposable jewelry creates an incentive structure to bid out the work to the cheapest factory available. We need to vote with our dollars for a more equitable world.",
+            "src_image3": "shopify://shop_images/transprnt.webp",
+            "src_heading3": "Transparent values",
+            "src_decript3": "We hold true to to who we are. We believe in equality and justice for all, and those beliefs permeate the work that we do and the jewelry we make. Everything we do stands for our values and we try to think, speak, and act in a framework of positive change. Cast out your voice and make a difference."
           }
         }
       },
