@@ -8,7 +8,13 @@
   
     {% when 'CARE' %}
       <div class="care-block">
+        <div class="cat-toggle">
         <h1>{{ block.settings.category }}</h1>
+          <button class="faq-category-toggle" type="button">
+        {{ category }}
+        <span class="icon">+</span>
+      </button>
+          </div>
         <div class="care-Inner-content">
           <div class="f-content">
         <h4>{{ block.settings.first_faq_heading }}</h4>
