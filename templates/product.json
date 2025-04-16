@@ -113,6 +113,57 @@
     },
     "faq_scratch_TatDmL": {
       "type": "FAQ-scratch",
+      "blocks": {
+        "care_MMftHV": {
+          "type": "CARE",
+          "settings": {
+            "category": "",
+            "first_faq_heading": "",
+            "first_caption": "",
+            "first_desc": "",
+            "first2_caption": "",
+            "first2_desc": "",
+            "sec_faq_heading": "",
+            "scnd_desc": "",
+            "third_faq_heading": "",
+            "thrd_desc": "",
+            "forth_faq_heading": "",
+            "forth_desc": ""
+          }
+        },
+        "shipping_Up8M4p": {
+          "type": "SHIPPING",
+          "settings": {
+            "shipping_category": "",
+            "svg_code": "",
+            "heading": "",
+            "description": "",
+            "svg_code2": "",
+            "heading2": "",
+            "description2": "",
+            "svg_code3": "",
+            "heading3": "",
+            "description3": ""
+          }
+        },
+        "sourcing_zXgzex": {
+          "type": "SOURCING",
+          "settings": {
+            "src_category": "",
+            "src_heading": "",
+            "src_decript": "",
+            "src_heading2": "",
+            "src_decript2": "",
+            "src_heading3": "",
+            "src_decript3": ""
+          }
+        }
+      },
+      "block_order": [
+        "care_MMftHV",
+        "shipping_Up8M4p",
+        "sourcing_zXgzex"
+      ],
       "name": "FAQ from Scratch",
       "settings": {
         "padding_lr": 20,
