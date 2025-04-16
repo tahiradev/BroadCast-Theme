@@ -480,40 +480,6 @@
       "settings": {
         "cption1": ""
       }
-    },
-    "scnd_custom_faq_9FNzVX": {
-      "type": "scnd-custom-FAQ",
-      "blocks": {
-        "faq_item_Tb4rgM": {
-          "type": "faq_item",
-          "settings": {
-            "question": "CARE & Instructions",
-            "answer": "Care Details"
-          }
-        },
-        "icon_box_ienqz8": {
-          "type": "icon_box",
-          "settings": {
-            "icon": "Icon",
-            "heading": "First Icon Heading",
-            "description": "Description"
-          }
-        },
-        "image_box_RFQdBW": {
-          "type": "image_box",
-          "settings": {
-            "image": "shopify://shop_images/wer-erng.webp",
-            "text": "image-Text"
-          }
-        }
-      },
-      "block_order": [
-        "faq_item_Tb4rgM",
-        "icon_box_ienqz8",
-        "image_box_RFQdBW"
-      ],
-      "name": "second FAQ Sections",
-      "settings": {}
     }
   },
   "order": [
@@ -530,7 +496,6 @@
     "favourit_product_yxmWUK",
     "follow_us_gallery_kgBt6G",
     "icons_multicolumn_UY7CDc",
-    "timeline_sec_JgfqKh",
-    "scnd_custom_faq_9FNzVX"
+    "timeline_sec_JgfqKh"
   ]
 }
