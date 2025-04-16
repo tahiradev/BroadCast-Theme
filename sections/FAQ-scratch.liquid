@@ -8,7 +8,7 @@
   
     {% when 'CARE' %}
       <div class="care-block">
-        <h3>{{ block.settings.category }}</h3>
+        <h1>{{ block.settings.category }}</h1>
 
         <h4>{{ block.settings.first_faq_heading }}</h4>
         <p>{{ block.settings.first_caption }}</p>
@@ -28,7 +28,7 @@
 
     {% when 'SHIPPING' %}
       <div class="shipping-block">
-        <h3>{{ block.settings.shipping_category }}</h3>
+        <h1>{{ block.settings.shipping_category }}</h1>
 
         <div class="shipping-section">
           <div class="svg">{{ block.settings.svg_code }}</div>
@@ -51,7 +51,7 @@
 
     {% when 'SOURCING' %}
       <div class="sourcing-block">
-        <h3>{{ block.settings.src_category }}</h3>
+        <h1>{{ block.settings.src_category }}</h1>
 
         <div class="source">
           <img src="{{ block.settings.src_image | img_url: 'medium' }}" alt="Image 1">
