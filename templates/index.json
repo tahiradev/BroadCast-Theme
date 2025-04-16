@@ -484,8 +484,8 @@
     "faq_scratch_3XzVF7": {
       "type": "FAQ-scratch",
       "blocks": {
-        "faq_kn8M4G": {
-          "type": "FAQ",
+        "care_faqM6T": {
+          "type": "CARE",
           "settings": {
             "category": "",
             "first_faq_heading": "",
@@ -494,27 +494,22 @@
             "first2_caption": "",
             "first2_desc": "",
             "sec_faq_heading": "",
-            "scnd_caption": "",
             "scnd_desc": "",
-            "scnd2_caption": "",
-            "scnd2_desc": "",
             "third_faq_heading": "",
-            "thrd_caption": "",
             "thrd_desc": "",
-            "thrd2_caption": "",
-            "thrd2_desc": "",
             "forth_faq_heading": "",
-            "forth_caption": "",
-            "forth_desc": "",
-            "forth2_caption": "",
-            "forth2_desc": ""
+            "forth_desc": ""
           }
         },
-        "info_pHnq3g": {
-          "type": "info",
+        "shipping_hAqFAW": {
+          "type": "SHIPPING",
           "settings": {
             "heading": "",
-            "description": ""
+            "description": "",
+            "heading2": "",
+            "description2": "",
+            "heading3": "",
+            "description3": ""
           }
         },
         "image_block_FYmPRD": {
@@ -525,8 +520,8 @@
         }
       },
       "block_order": [
-        "faq_kn8M4G",
-        "info_pHnq3g",
+        "care_faqM6T",
+        "shipping_hAqFAW",
         "image_block_FYmPRD"
       ],
       "name": "FAQ from Scratch",
