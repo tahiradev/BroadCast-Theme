@@ -159,6 +159,29 @@
   }
 </style>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggleButtons = document.querySelectorAll('.faq-category-toggle');
+
+    toggleButtons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        const catToggle = button.closest('.cat-toggle');
+        if (!catToggle) return;
+
+        const content = catToggle.nextElementSibling;
+        if (!content) return;
+
+        content.classList.toggle('active');
+
+        const icon = button.querySelector('.icon');
+        if (icon) {
+          icon.textContent = content.classList.contains('active') ? '-' : '+';
+        }
+      });
+    });
+  });
+</script>
+
 {% schema %}
   {
     "name": "FAQ from Scratch",
