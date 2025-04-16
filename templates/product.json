@@ -111,99 +111,19 @@
         "padding_bottom": 28
       }
     },
-    "custom_product_faq_gKaTT4": {
-      "type": "Custom-product-FAQ",
-      "blocks": {
-        "faq_item_MkLRbW": {
-          "type": "faq_item",
-          "settings": {
-            "category": "CARE INSTURCTIONS",
-            "first_faq_heading": "How do I take care of my jewelry?",
-            "first_caption": "14K Gold",
-            "first_desc": "Scrub lightly with a fresh toothbrush and warm water. You can also buff your pieces using the cloth included in your order.",
-            "first2_caption": "Sterling Silver",
-            "first2_desc": "Gently rub the surface with the cloth included in your order.",
-            "sec_faq_heading": "Do you have a warranty?",
-            "scnd_caption": "Yes! For 3 years from the date of purchase, we’ll take care of your product if any damage to the material occurs. Simply contact us and we’ll send you a replacement.Please note: This warranty does not cover lost items, scratches that come with normal wear and tear, improper use or storage of your product, and any modification to your product done by a third party.",
-            "scnd_desc": "",
-            "scnd2_caption": "",
-            "scnd2_desc": "",
-            "third_faq_heading": "",
-            "thrd_caption": "",
-            "thrd_desc": "",
-            "thrd2_caption": "",
-            "thrd2_desc": "",
-            "forth_faq_heading": "",
-            "forth_caption": "",
-            "forth_desc": "",
-            "forth2_caption": "",
-            "forth2_desc": ""
-          }
-        },
-        "faq_item_kFbWj6": {
-          "type": "faq_item",
-          "settings": {
-            "category": "Shipping & Returns",
-            "first_faq_heading": "",
-            "first_caption": "",
-            "first_desc": "",
-            "first2_caption": "",
-            "first2_desc": "",
-            "sec_faq_heading": "",
-            "scnd_caption": "",
-            "scnd_desc": "",
-            "scnd2_caption": "",
-            "scnd2_desc": "",
-            "third_faq_heading": "",
-            "thrd_caption": "",
-            "thrd_desc": "",
-            "thrd2_caption": "",
-            "thrd2_desc": "",
-            "forth_faq_heading": "",
-            "forth_caption": "",
-            "forth_desc": "",
-            "forth2_caption": "",
-            "forth2_desc": ""
-          }
-        },
-        "faq_item_RtYiff": {
-          "type": "faq_item",
-          "settings": {
-            "category": "Sourcing &  Materials",
-            "first_faq_heading": "",
-            "first_caption": "",
-            "first_desc": "",
-            "first2_caption": "",
-            "first2_desc": "",
-            "sec_faq_heading": "",
-            "scnd_caption": "",
-            "scnd_desc": "",
-            "scnd2_caption": "",
-            "scnd2_desc": "",
-            "third_faq_heading": "",
-            "thrd_caption": "",
-            "thrd_desc": "",
-            "thrd2_caption": "",
-            "thrd2_desc": "",
-            "forth_faq_heading": "",
-            "forth_caption": "",
-            "forth_desc": "",
-            "forth2_caption": "",
-            "forth2_desc": ""
-          }
-        }
-      },
-      "block_order": [
-        "faq_item_MkLRbW",
-        "faq_item_kFbWj6",
-        "faq_item_RtYiff"
-      ],
-      "settings": {}
+    "faq_scratch_TatDmL": {
+      "type": "FAQ-scratch",
+      "name": "FAQ from Scratch",
+      "settings": {
+        "padding_lr": 20,
+        "max_width": 1200,
+        "padding_left": 15
+      }
     }
   },
   "order": [
     "main",
     "related-products",
-    "custom_product_faq_gKaTT4"
+    "faq_scratch_TatDmL"
   ]
 }
