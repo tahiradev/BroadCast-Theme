@@ -480,6 +480,40 @@
       "settings": {
         "cption1": ""
       }
+    },
+    "scnd_custom_faq_dNtwWa": {
+      "type": "scnd-custom-FAQ",
+      "blocks": {
+        "faq_list_qbwBPN": {
+          "type": "faq_list",
+          "settings": {
+            "question": "",
+            "answer": ""
+          }
+        },
+        "faq_icon_9Gemfp": {
+          "type": "faq_icon",
+          "settings": {
+            "icon": "",
+            "title": "",
+            "description": ""
+          }
+        },
+        "faq_expand_pyfGwX": {
+          "type": "faq_expand",
+          "settings": {
+            "title": "",
+            "details": ""
+          }
+        }
+      },
+      "block_order": [
+        "faq_list_qbwBPN",
+        "faq_icon_9Gemfp",
+        "faq_expand_pyfGwX"
+      ],
+      "name": "secon Custom FAQ Layout",
+      "settings": {}
     }
   },
   "order": [
@@ -496,6 +530,7 @@
     "favourit_product_yxmWUK",
     "follow_us_gallery_kgBt6G",
     "icons_multicolumn_UY7CDc",
-    "timeline_sec_JgfqKh"
+    "timeline_sec_JgfqKh",
+    "scnd_custom_faq_dNtwWa"
   ]
 }
