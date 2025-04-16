@@ -512,17 +512,22 @@
             "description3": ""
           }
         },
-        "image_block_FYmPRD": {
-          "type": "image_block",
+        "sourcing_E8LJ8q": {
+          "type": "SOURCING",
           "settings": {
-            "text": ""
+            "src_heading": "",
+            "src_decript": "",
+            "src_heading2": "",
+            "src_decript2": "",
+            "src_heading3": "",
+            "src_decript3": ""
           }
         }
       },
       "block_order": [
         "care_faqM6T",
         "shipping_hAqFAW",
-        "image_block_FYmPRD"
+        "sourcing_E8LJ8q"
       ],
       "name": "FAQ from Scratch",
       "settings": {
