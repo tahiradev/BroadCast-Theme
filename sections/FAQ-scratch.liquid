@@ -40,7 +40,13 @@
 
     {% when 'SHIPPING' %}
       <div class="shipping-block">
+         <div class="cat-toggle">
         <h1>{{ block.settings.shipping_category }}</h1>
+         <button class="faq-category-toggle" type="button">
+        {{ shipping_category }}
+        <span class="icon">+</span>
+      </button>
+         </div>
 <div class="shipping-inner-content">
         <div class="shipping-section">
           <div class="svg">{{ block.settings.svg_code }}</div>
