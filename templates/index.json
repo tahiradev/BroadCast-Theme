@@ -504,6 +504,7 @@
         "shipping_hAqFAW": {
           "type": "SHIPPING",
           "settings": {
+            "shipping_category": "Shipping & Returns",
             "svg_code": "<svg aria-hidden=\"true\" focusable=\"false\" role=\"presentation\" class=\"icon icon-green-shipment\" viewbox=\"0 0 24 24\"><path d=\"M7 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4z\" stroke=\"#000\" stroke-miterlimit=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path><path d=\"M14 15V4.6a.6.6 0 0 0-.6-.6H2.6a.6.6 0 0 0-.6.6v9.8a.6.6 0 0 0 .6.6h2.05M14 15H9.05M14 7h5.61a.6.6 0 0 1 .548.356l1.29 2.903a.6.6 0 0 1 .052.243V12\" stroke=\"#000\" stroke-linecap=\"round\"></path><path d=\"M17 23s.9-3.118 3-5m-.198 3.424-.134.013a3.094 3.094 0 0 1-3.366-2.774 3.06 3.06 0 0 1 2.761-3.35l2.986-.28a.35.35 0 0 1 .381.314l.255 2.58a3.194 3.194 0 0 1-2.883 3.497z\" stroke=\"#000\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>",
             "heading": "International Shipping",
             "description": "We are happy to announce we officially ship internationally! All orders are dispatched from our US warehouse within 2 - 3 business days.",
@@ -518,6 +519,7 @@
         "sourcing_E8LJ8q": {
           "type": "SOURCING",
           "settings": {
+            "src_category": "Sourcing & Materia",
             "src_image": "shopify://shop_images/tre.webp",
             "src_heading": "Sustainable sourcing",
             "src_decript": "We are committed to quality products that are manufactured ethically and sustainably. All of our pieces are traceable throughout the supply chain. We strive to ensure our products contribute to the well-being of people and planet, and our efforts put us on track towards a brighter future.",
