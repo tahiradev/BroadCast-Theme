@@ -69,7 +69,14 @@
   </div>
     {% when 'SOURCING' %}
       <div class="sourcing-block">
+      
+              <div class="cat-toggle">
         <h1>{{ block.settings.src_category }}</h1>
+         <button class="faq-category-toggle" type="button">
+        {{ src_category }}
+        <span class="icon">+</span>
+      </button>
+         </div>
 <div class="src-inner-content">
         <div class="source">
           <img src="{{ block.settings.src_image | img_url: 'medium' }}" alt="Image 1">
