@@ -142,7 +142,28 @@
   color: #333;
   line-height: 1.5;
 }
+  
+* 🔁 Scrollable style below 749px */
+  
+@media screen and (max-width: 749px) {
+  .src-inner-content {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
 
+  .source {
+    flex: 0 0 100%;
+    min-width: 100%;
+    scroll-snap-align: start;
+    padding-right: 20px;
+  }
+
+  .source img {
+    height: 200px;
+  }
+}
   
   /* Toggle-Button */
   .cat-toggle {
