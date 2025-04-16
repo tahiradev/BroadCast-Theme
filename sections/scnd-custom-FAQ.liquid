@@ -1,167 +1,10 @@
-<!-- sections/custom-faq.liquid -->
-<div class="faq-wrapper">
-
-  <!-- First FAQ Section -->
-  <div class="faq-section">
-    <h2>General Questions</h2>
-    <div class="faq-accordion">
-      {% for block in section.blocks %}
-        {% if block.type == 'faq_list' %}
-        <div class="faq-item">
-          <button class="faq-question">{{ block.settings.question }}</button>
-          <div class="faq-answer">{{ block.settings.answer }}</div>
-        </div>
-        {% endif %}
-      {% endfor %}
-    </div>
-  </div>
-
-  <!-- Second FAQ Section -->
-  <div class="faq-icons-section">
-    <h2>Why Choose Us?</h2>
-    <div class="faq-icons-grid">
-      {% for block in section.blocks %}
-        {% if block.type == 'faq_icon' %}
-        <div class="faq-icon-item">
-          <div class="icon">{{ block.settings.icon }}</div>
-          <h3>{{ block.settings.title }}</h3>
-          <p>{{ block.settings.description }}</p>
-        </div>
-        {% endif %}
-      {% endfor %}
-    </div>
-  </div>
-
-  <!-- Third FAQ Section -->
-  <div class="faq-expandable-section">
-    <h2>More Information</h2>
-    <div class="faq-expandable-grid">
-      {% for block in section.blocks %}
-        {% if block.type == 'faq_expand' %}
-        <div class="expandable-item">
-          <img src="{{ block.settings.image | img_url: 'medium' }}" alt="FAQ image">
-          <div class="faq-title-row">
-            <h3>{{ block.settings.title }}</h3>
-            <button class="expand-toggle">+</button>
-          </div>
-          <div class="expand-content">{{ block.settings.details }}</div>
-        </div>
-        {% endif %}
-      {% endfor %}
-    </div>
-  </div>
-
-</div>
-
-<style>
-.faq-wrapper {
-  padding: 40px;
-}
-.faq-accordion .faq-item {
-  margin-bottom: 10px;
-}
-.faq-question {
-  background: #f3f3f3;
-  border: none;
-  width: 100%;
-  padding: 10px;
-  cursor: pointer;
-  font-weight: bold;
-  text-align: left;
-}
-.faq-answer {
-  display: none;
-  padding: 10px;
-  background: #fff;
-  border-left: 3px solid #000;
-}
-
-/* Second Section */
-.faq-icons-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-.faq-icon-item {
-  flex: 1 1 calc(33.333% - 20px);
-  text-align: center;
-}
-.faq-icon-item .icon {
-  font-size: 40px;
-  margin-bottom: 10px;
-}
-
-/* Third Section */
-.faq-expandable-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-.expandable-item {
-  flex: 1 1 calc(33.333% - 20px);
-  position: relative;
-  border: 1px solid #ddd;
-  padding: 10px;
-}
-.expandable-item img {
-  width: 100%;
-  height: auto;
-}
-.faq-title-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 10px;
-}
-.expand-toggle {
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-}
-.expand-content {
-  display: none;
-  padding-top: 10px;
-}
-.expand-toggle.open::after {
-  content: '-';
-}
-</style>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    // Accordion for first FAQ
-    document.querySelectorAll('.faq-question').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const answer = btn.nextElementSibling;
-        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-      });
-    });
-
-    // Expandable FAQs in third section
-    document.querySelectorAll('.expandable-item').forEach(item => {
-      const toggle = item.querySelector('.expand-toggle');
-      const content = item.querySelector('.expand-content');
-
-      toggle.addEventListener('click', () => {
-        if (content.style.display === 'block') {
-          content.style.display = 'none';
-          toggle.textContent = '+';
-        } else {
-          content.style.display = 'block';
-          toggle.textContent = '-';
-        }
-      });
-    });
-  });
-</script>
-
 {% schema %}
 {
-  "name": "second Custom FAQ",
+  "name": "Custom FAQ Section",
+  "settings": [],
   "blocks": [
     {
-      "type": "faq_list",
+      "type": "faq_item",
       "name": "FAQ List Item",
       "settings": [
         { "type": "text", "id": "question", "label": "Question" },
@@ -169,29 +12,133 @@
       ]
     },
     {
-      "type": "faq_icon",
+      "type": "icon_box",
       "name": "Icon Column",
       "settings": [
-        { "type": "text", "id": "icon", "label": "Icon (e.g., emoji or HTML)" },
-        { "type": "text", "id": "title", "label": "Heading" },
+        { "type": "text", "id": "icon", "label": "Icon (emoji or HTML)" },
+        { "type": "text", "id": "heading", "label": "Heading" },
         { "type": "textarea", "id": "description", "label": "Description" }
       ]
     },
     {
-      "type": "faq_expand",
-      "name": "Expandable Image Column",
+      "type": "image_box",
+      "name": "Image Text Column",
       "settings": [
         { "type": "image_picker", "id": "image", "label": "Image" },
-        { "type": "text", "id": "title", "label": "Heading" },
-        { "type": "textarea", "id": "details", "label": "Expandable Content" }
+        { "type": "textarea", "id": "text", "label": "Text below image" }
       ]
     }
   ],
-  "max_blocks": 30,
   "presets": [
     {
-      "name": "secon Custom FAQ Layout"
+      "name": "Custom FAQ Sections",
+      "category": "Custom"
     }
   ]
 }
 {% endschema %}
+
+<div class="faq-wrapper page-width">
+
+  <!-- FAQ TOGGLE SECTION -->
+  <h2>FAQs</h2>
+  <div class="faq-accordion">
+    {% for block in section.blocks %}
+      {% if block.type == 'faq_item' %}
+        <div class="faq-toggle">
+          <button class="faq-question">{{ block.settings.question }}</button>
+          <div class="faq-answer">
+            <p>{{ block.settings.answer }}</p>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <!-- ICON GRID SECTION -->
+  <h2 class="mt-8">Shipping & Returns</h2>
+  <div class="faq-icon-grid">
+    {% for block in section.blocks %}
+      {% if block.type == 'icon_box' %}
+        <div class="faq-icon-card">
+          <div class="faq-icon">{{ block.settings.icon }}</div>
+          <h3>{{ block.settings.heading }}</h3>
+          <p>{{ block.settings.description }}</p>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <!-- IMAGE TEXT GRID SECTION -->
+  <h2 class="mt-8">Sourcing & Materials</h2>
+  <div class="faq-image-grid">
+    {% for block in section.blocks %}
+      {% if block.type == 'image_box' %}
+        <div class="faq-image-card">
+          <img src="{{ block.settings.image | image_url: width: 500 }}" alt="Image FAQ">
+          <p>{{ block.settings.text }}</p>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+</div>
+
+<style>
+.faq-wrapper h2 {
+  font-size: 1.75rem;
+  margin: 40px 0 20px;
+  font-weight: bold;
+}
+
+.faq-accordion .faq-toggle {
+  margin-bottom: 12px;
+  border-bottom: 1px solid #ccc;
+}
+.faq-accordion .faq-question {
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 10px 0;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+.faq-answer {
+  display: none;
+  padding: 10px 0;
+}
+
+.faq-icon-grid, .faq-image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+.faq-icon-card, .faq-image-card {
+  flex: 1 1 30%;
+  text-align: center;
+}
+.faq-icon {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+.faq-image-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const questions = document.querySelectorAll('.faq-question');
+  questions.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const answer = btn.nextElementSibling;
+      answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+});
+</script>
