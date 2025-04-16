@@ -49,7 +49,7 @@
           <p>{{ block.settings.description3 }}</p>
         </div>
       </div>
-      </div>
+  </div>
     {% when 'SOURCING' %}
       <div class="sourcing-block">
         <h1>{{ block.settings.src_category }}</h1>
@@ -82,6 +82,11 @@
   </div>
 </div>
 <style>
+  .shipping-inner-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
   /* Source-FAQ */
   .src-inner-content {
     display: grid;
