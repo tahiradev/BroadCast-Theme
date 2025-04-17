@@ -2,9 +2,10 @@
 <div class="phero-container">
   <div class="phero-inner-container">
     <div class="phero-img">
-      {% if condition %}
-        
+     {% if section.settings.p_img != blank %}
+        <img src="{{ section.settings.p_img | img_url: 'master' }}" alt="Product Image" />
       {% endif %}
+
     </div>
     <div class="phero-content">
       <h2>{{ section.settings.p_heading }}</h2>
