@@ -12,22 +12,40 @@
   </div>
 </div>
 <style>
- img {
-    width: 100%;
-    height: 100%;
-  }
-  .phero-content {
-    text-align: center;
-  }
-  .phero-content h2 {
-    font-size: 32px;
-    font-weight: 600;
-    margin: 0 0 1rem;
-  }
-   .phero-content p {
-     font-size: 16px;
-     margin: 0 0 1rem;
-   }
+.phero-inner-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.phero-inner-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.phero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: for better contrast */
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.phero-content h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0 0 1rem;
+}
+
+.phero-content p {
+  font-size: 16px;
+  margin: 0;
+}
 </style>
 {% schema %}
   {
