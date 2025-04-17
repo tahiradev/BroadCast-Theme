@@ -480,15 +480,6 @@
       "settings": {
         "cption1": ""
       }
-    },
-    "product_hero_content_Bqm7KF": {
-      "type": "product-hero-content",
-      "name": "Product Hero",
-      "settings": {
-        "p_img": "shopify://shop_images/GbyVOo4zw987Eb0vmsC7.webp",
-        "p_heading": "Recycled Materials",
-        "p_descript": "We partner with high quality jewellers who only use recycled gold, AAA-grade gemstones, and ethically sourced diamonds."
-      }
     }
   },
   "order": [
@@ -505,7 +496,6 @@
     "favourit_product_yxmWUK",
     "follow_us_gallery_kgBt6G",
     "icons_multicolumn_UY7CDc",
-    "timeline_sec_JgfqKh",
-    "product_hero_content_Bqm7KF"
+    "timeline_sec_JgfqKh"
   ]
 }
