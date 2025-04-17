@@ -480,69 +480,6 @@
       "settings": {
         "cption1": ""
       }
-    },
-    "faq_scratch_3XzVF7": {
-      "type": "FAQ-scratch",
-      "blocks": {
-        "care_faqM6T": {
-          "type": "CARE",
-          "settings": {
-            "category": "Care Instructions",
-            "first_faq_heading": "How do I take care of my jewelry?",
-            "first_caption": "14K Gold",
-            "first_desc": "Scrub lightly with a fresh toothbrush and warm water. You can also buff your pieces using the cloth included in your order.",
-            "first2_caption": "Sterling Silver",
-            "first2_desc": "Gently rub the surface with the cloth included in your order.",
-            "sec_faq_heading": "How do I use the polishing cloth?",
-            "scnd_desc": "Gently rub the surface of your piece with the polishing cloth. Never wash the polishing cloth as it will lose its effectiveness, and keep out of reach of children!",
-            "third_faq_heading": "Do you have a warranty?",
-            "thrd_desc": "Yes! For 3 years from the date of purchase, we’ll take care of your product if any damage to the material occurs. Simply contact us and we’ll send you a replacement.Please note: This warranty does not cover lost items, scratches that come with normal wear and tear, improper use or storage of your product, and any modification to your product done by a third party.",
-            "forth_faq_heading": "Do you create custom pieces?",
-            "forth_desc": "We're not able to build custom pieces at this time."
-          }
-        },
-        "shipping_hAqFAW": {
-          "type": "SHIPPING",
-          "settings": {
-            "shipping_category": "Shipping & Returns",
-            "svg_code": "<svg aria-hidden=\"true\" focusable=\"false\" role=\"presentation\" class=\"icon icon-green-shipment\" viewbox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\">\n  <path d=\"M7 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4z\" stroke=\"#000\" stroke-miterlimit=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n  <path d=\"M14 15V4.6a.6.6 0 0 0-.6-.6H2.6a.6.6 0 0 0-.6.6v9.8a.6.6 0 0 0 .6.6h2.05M14 15H9.05M14 7h5.61a.6.6 0 0 1 .548.356l1.29 2.903a.6.6 0 0 1 .052.243V12\" stroke=\"#000\" stroke-linecap=\"round\"></path>\n  <path d=\"M17 23s.9-3.118 3-5m-.198 3.424-.134.013a3.094 3.094 0 0 1-3.366-2.774 3.06 3.06 0 0 1 2.761-3.35l2.986-.28a.35.35 0 0 1 .381.314l.255 2.58a3.194 3.194 0 0 1-2.883 3.497z\" stroke=\"#000\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n</svg>",
-            "heading": "International Shipping",
-            "description": "We are happy to announce we officially ship internationally! All orders are dispatched from our US warehouse within 2 - 3 business days.",
-            "svg_code2": "<svg aria-hidden=\"true\" focusable=\"false\" role=\"presentation\" class=\"icon icon-chat\" viewbox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\">\n  <path d=\"M7.5 22a5.5 5.5 0 1 0-4.764-2.75l-.461 2.475 2.475-.46A5.474 5.474 0 0 0 7.5 22z\" stroke=\"#000\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n  <path d=\"M15.282 17.898A7.946 7.946 0 0 0 18 16.93l3.6.67-.67-3.6A8 8 0 1 0 6.083 8.849\" stroke=\"#000\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n</svg>",
-            "heading2": "Order tracking",
-            "description2": "Tracking numbers are automatically sent as soon as your order is packed. Please check your junk folder if you do not receive one 72hrs after placing your order.",
-            "svg_code3": "<svg aria-hidden=\"true\" focusable=\"false\" role=\"presentation\" class=\"icon icon-chat\" viewbox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\">\n  <path d=\"M7.5 22a5.5 5.5 0 1 0-4.764-2.75l-.461 2.475 2.475-.46A5.474 5.474 0 0 0 7.5 22z\" stroke=\"#000\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n  <path d=\"M15.282 17.898A7.946 7.946 0 0 0 18 16.93l3.6.67-.67-3.6A8 8 0 1 0 6.083 8.849\" stroke=\"#000\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n</svg>",
-            "heading3": "Get in touch",
-            "description3": "If you have any questions about your order, please contact us. Our customer service is available Monday through Friday from 8am until 5pm est."
-          }
-        },
-        "sourcing_E8LJ8q": {
-          "type": "SOURCING",
-          "settings": {
-            "src_category": "Sourcing & Materia",
-            "src_image": "shopify://shop_images/tre.webp",
-            "src_heading": "Sustainable sourcing",
-            "src_decript": "We are committed to quality products that are manufactured ethically and sustainably. All of our pieces are traceable throughout the supply chain. We strive to ensure our products contribute to the well-being of people and planet, and our efforts put us on track towards a brighter future.",
-            "src_image2": "shopify://shop_images/labor.webp",
-            "src_heading2": "Ethical labor",
-            "src_decript2": "Our founders Christina Smith and Clement Savant founded Broadcast to break the norms of the jewelry industry. Cheap, disposable jewelry creates an incentive structure to bid out the work to the cheapest factory available. We need to vote with our dollars for a more equitable world.",
-            "src_image3": "shopify://shop_images/transprnt.webp",
-            "src_heading3": "Transparent values",
-            "src_decript3": "We hold true to to who we are. We believe in equality and justice for all, and those beliefs permeate the work that we do and the jewelry we make. Everything we do stands for our values and we try to think, speak, and act in a framework of positive change. Cast out your voice and make a difference."
-          }
-        }
-      },
-      "block_order": [
-        "care_faqM6T",
-        "shipping_hAqFAW",
-        "sourcing_E8LJ8q"
-      ],
-      "name": "FAQ from Scratch",
-      "settings": {
-        "padding_lr": 20,
-        "max_width": 1200,
-        "padding_left": 15
-      }
     }
   },
   "order": [
@@ -559,7 +496,6 @@
     "favourit_product_yxmWUK",
     "follow_us_gallery_kgBt6G",
     "icons_multicolumn_UY7CDc",
-    "timeline_sec_JgfqKh",
-    "faq_scratch_3XzVF7"
+    "timeline_sec_JgfqKh"
   ]
 }
